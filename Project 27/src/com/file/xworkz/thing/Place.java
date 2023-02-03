@@ -16,21 +16,28 @@ public class Place {
 		System.out.println("Declaring constructor with String");
 	}
 
-	public Place(int population) {
+	public Place(String name, int population) {
+		this(name);
 		this.population = population;
-		System.out.println("Declaring constructor with int");
+		System.out.println("Declaring constructor with String and int");
 	}
 
-	public Place(String district, String state) {
+	public Place(String name, int population, String district) {
+		this(name, population);
 		this.district = district;
-		this.state = state;
-		System.out.println("Declaring constructor with String and String");
+		System.out.println("Declaring constructor with String,int and String");
 	}
 
-	public Place(String district, String state, String country) {
-		this(district, state);// chaining;
+	public Place(String name,int population,String district,String state) {
+	    this(name,population,district);
+		this.state=state;
+		System.out.println("Declaring constructor with String,int,String and String");
+	}
+
+	public Place(String name, int population, String district, String state, String country) {
+		this(name, population, district, state);
 		this.country = country;
-		System.out.println("Declaring constructor with String,String and String");
+		System.out.println("Declaring constructor with String,int,String,String and String");
 	}
 
 	public void initVariables(String name, int population, String district, String state, String country) {
