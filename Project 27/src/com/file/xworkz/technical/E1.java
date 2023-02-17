@@ -9,10 +9,9 @@ public class E1 {
 				if (i == 1 && j == 1 || i == 2 && j == 1 || i == 2 && j == 2 || i == 3 && j == 1 || i == 3 && j == 2
 						|| i == 3 && j == 3) {
 					System.out.print(j + " ");
-				} else {
-					System.out.println("");
-				}
+				} 
 			}
+			System.out.println();
 		}
 
 	}
