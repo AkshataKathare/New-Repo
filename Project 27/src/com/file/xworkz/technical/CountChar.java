@@ -8,15 +8,23 @@ public class CountChar {
 		System.out.println("Enter String name");
 
 		Scanner sc = new Scanner(System.in);
-		String name = sc.next();
+		String name = sc.nextLine();
 
 		char ch[] = name.toCharArray();
 		int countChar = 0;
+		int countSpace = 0;
 
 		for (int i = 0; i < ch.length; i++) {
-			countChar += 1;
+
+			if (ch[i] == ' ') {
+				countSpace += 1;
+			} else {
+				countChar += 1;
+
+			}
 		}
 		System.out.println("Number of characters :" + countChar);
+		System.out.println("Number of space " + countSpace);
 
 	}
 
