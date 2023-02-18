@@ -13,7 +13,7 @@ public class HotBoxRunner {
 		hotBox.quality = 'A';
 		hotBox.steel = true;
 
-		System.out.println("AutoBoxing");
+		System.out.println("AutoBoxing");//Converting primitive to no-primitive
 
 		Byte b = hotBox.radius;
 		System.out.println("Radius :" + b);
@@ -41,7 +41,7 @@ public class HotBoxRunner {
 
 		System.out.println("    ");
 
-		System.out.println("Auto Unboxing");
+		System.out.println("Auto Unboxing");//converting non-primitive to primitive
 
 		byte y = new Byte(b);
 		System.out.println("Unbox Radius :" + y);

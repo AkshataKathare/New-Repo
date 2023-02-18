@@ -29,7 +29,7 @@ public class GaneshTemple extends Temple {
 		System.out.println("Details of Temple..");
 		System.out.println(this.location);
 		System.out.println(super.location);
-		super.bell();//invoking method bell() from parent class
+		super.bell();// invoking method bell() from parent class
 		super.distance();
 		System.out.println(this.ticketPrice());
 		super.ticketPrice();

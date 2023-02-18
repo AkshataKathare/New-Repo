@@ -8,22 +8,22 @@ public class Palindrome {
 
 		System.out.println("Enter String name");
 
-		Scanner sp = new Scanner(System.in);
-		String name = sp.next();
+		Scanner sc = new Scanner(System.in);
+		String name = sc.next();
 
 		char ch[] = name.toCharArray();
 		String rev = "";
-		for (int i = ch.length - 1; i >= 0; i--) {
 
+		for (int i = ch.length - 1; i >= 0; i--) {
 			rev += ch[i];// rev=rev+ch[i]
 		}
-		System.out.println("Original :" + name);
-		System.out.println("Reversed :" + rev);
+		System.out.println("Original name: " + name);
+		System.out.println("Reversed name: " + rev);
 
 		if (name.equals(rev)) {
-			System.out.println("It is a palindrome");
+			System.out.println("Its a palindrome");
 		} else {
-			System.out.println("It is not a palindrome");
+			System.out.println("Its not a palindrome");
 		}
 
 	}
