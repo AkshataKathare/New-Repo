@@ -8,12 +8,17 @@ import com.xworkz.inheritance.object.things.TestCricket;
 
 public class Converter {
 
-	public void display1() {
-		Sport sport = new Sport();
+	public void display1(Sport sport) {
+
+		if (sport instanceof TestCricket) {
+			TestCricket cricket = (TestCricket) sport;
+			cricket.getCaptainName();
+		}
+
 		System.out.println(sport.getTotal());
 	}
 
-	public void display2() {
+	public void display2(Sport cricket) {
 		Sport sport1 = new Cricket();
 		System.out.println(sport1.getTotal());
 		Cricket cricket1 = (Cricket) sport1;
