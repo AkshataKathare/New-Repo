@@ -8,13 +8,12 @@ public class ConverterRunner {
 	public static void main(String[] args) {
 
 		Converter converter = new Converter();
+
+		Sport sport1 = new Sport();
+		sport1.toString();
+		System.out.println(sport1);
 		
-		Sport sport=new Sport();
-		converter.display1(sport);
-		converter.display2();
-		converter.display3();
-		converter.display4();
-		converter.display5();
+		
 
 	}
 
