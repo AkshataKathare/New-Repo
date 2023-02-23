@@ -10,6 +10,7 @@ public class CarnivorousAnimal extends Tiger {
 	public boolean wildAnimal() {
 		System.out.println("Running wildAnimal in CarnivorousAnimal");
 		return false;
+
 	}
 
 }

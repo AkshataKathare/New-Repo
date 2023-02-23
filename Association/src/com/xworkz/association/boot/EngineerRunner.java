@@ -22,7 +22,7 @@ public class EngineerRunner {
 		degree.setBranch("PCM");
 
 		Degree degree1 = new Degree();
-		degree1.setName("Shubhangi");
+		degree1.setName("BE");
 		degree1.setDuration(4);
 		degree1.setPursue(true);
 		degree1.setPercentage(85);

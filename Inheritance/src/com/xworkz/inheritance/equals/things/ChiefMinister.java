@@ -40,7 +40,7 @@ public class ChiefMinister {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in ChiefMinister..");
+		System.out.println("Over-riding equals in ChiefMinister.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null..");
 			if (obj instanceof ChiefMinister) {

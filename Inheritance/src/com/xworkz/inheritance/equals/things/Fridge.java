@@ -37,7 +37,7 @@ public class Fridge {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in Fridge..");
+		System.out.println("Over-riding equals in Fridge.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof Fridge) {

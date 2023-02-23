@@ -13,6 +13,8 @@ public class ChiefMinisterRunner {
 		ChiefMinister chiefMinister2 = new ChiefMinister("Basavaraj Bommai", "Karnataka", 55, "S.Bommai", "R.Bommai",
 				"Gangamma", 2, "Engineering", "Eritica", 5, "BJP", 2021, "Indian");
 		System.out.println(chiefMinister2);
+		
+		System.out.println("==========");
 
 		boolean equal = chiefMinister.equals(chiefMinister2);
 		System.out.println(equal);

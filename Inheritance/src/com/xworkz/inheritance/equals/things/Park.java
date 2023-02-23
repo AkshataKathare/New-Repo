@@ -25,7 +25,7 @@ public class Park {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in Park..");
+		System.out.println("Over-riding equals in Park.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof Park) {

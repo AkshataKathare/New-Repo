@@ -2,6 +2,8 @@ package com.xworkz.override.things;
 
 public class Tiger {
 
+	private String location;
+
 	public Tiger() {
 		System.out.println("No-arg constructor in Tiger");
 	}

@@ -18,7 +18,7 @@ public class FootWare {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("over-riding equals in FootWare..");
+		System.out.println("over-riding equals in FootWare.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null..");
 			if (obj instanceof FootWare) {

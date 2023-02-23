@@ -20,7 +20,7 @@ public class Alcohol {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in Alcohol..");
+		System.out.println("Over-riding equals in Alcohol.." + obj);// alcohol2 is obj
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof Alcohol) {

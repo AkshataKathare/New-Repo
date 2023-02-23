@@ -18,7 +18,7 @@ public class WaterFall {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in WaterFall..");
+		System.out.println("Over-riding equals in WaterFall.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null..");
 			if (obj instanceof WaterFall) {

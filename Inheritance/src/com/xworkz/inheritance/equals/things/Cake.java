@@ -20,7 +20,7 @@ public class Cake {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in Cake..");
+		System.out.println("Over-riding equals in Cake.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null..");
 			if (obj instanceof Cake) {

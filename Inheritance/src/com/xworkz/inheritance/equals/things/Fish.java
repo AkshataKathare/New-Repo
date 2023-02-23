@@ -21,6 +21,7 @@ public class Fish {
 
 	@Override
 	public boolean equals(Object obj) {
+		System.out.println("Over-riding equals in Fish .." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof Fish) {

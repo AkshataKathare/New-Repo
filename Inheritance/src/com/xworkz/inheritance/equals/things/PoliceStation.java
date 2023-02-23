@@ -33,7 +33,7 @@ public class PoliceStation {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in PoliceStation..");
+		System.out.println("Over-riding equals in PoliceStation.." + obj);
 		if (obj != null) {
 			System.out.println("obj is not null..");
 			if (obj instanceof PoliceStation) {
