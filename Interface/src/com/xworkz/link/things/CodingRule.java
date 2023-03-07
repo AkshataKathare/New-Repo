@@ -19,6 +19,8 @@ public interface CodingRule {
 	String principle3();
 
 	String principle4();
+
+	String accessabilityOfStaticMembers();
 	
 	
 

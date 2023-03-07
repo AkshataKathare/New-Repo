@@ -1,5 +1,7 @@
 package com.xworkz.link.boot;
 
+import com.xworkz.link.things.CodingRule;
+
 public class Programmer implements CodingRule {
 
 	@Override

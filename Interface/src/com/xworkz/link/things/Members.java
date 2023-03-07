@@ -93,7 +93,7 @@ public class Members implements FamilyRule {
 
 	@Override
 	public String toString() {
-		System.out.println(Over-riding toString in Members);
+		System.out.println("Over-riding toString in Members");
 		return "Wake up time:"+this.wakeUpTime()+this.breakFastTime()+this.careFor()+this.limitTime()+this.lunchTime()+this.minMembers()+this.respectTo()+this.snacksTime()+this.teaTime()+this.attendFamilyFunctions()+this.beingIndependent()+this.pray()+this.returnHomeOnTime()+this.sleepOnTime()+this.unity();
 	}
 

@@ -1,4 +1,4 @@
-package com.xworkz.link.boot;
+package com.xworkz.link.things;
 
 public class Programmer implements CodingRule {
 

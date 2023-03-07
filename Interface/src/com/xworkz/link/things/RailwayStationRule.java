@@ -16,6 +16,6 @@ public interface RailwayStationRule {
 
 	boolean stayInWaitingRoom();
 
-	boolean clean();''
+	boolean clean();
 
 }

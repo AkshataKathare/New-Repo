@@ -52,4 +52,10 @@ public class TimeMachine extends ATM {
 		System.out.println("Running miniStatement in TimeMachine..");
 	}
 
+	@Override
+	void account() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
