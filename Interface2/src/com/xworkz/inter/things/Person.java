@@ -1,6 +1,20 @@
 package com.xworkz.inter.things;
 
-public class Person implements PassportRule,DubaiVisaRule{
+public class Person extends Info implements PassportRule,DubaiVisaRule {
+	
+	@Override
+	public void name() {
+		System.out.println("Running name in Person");
+	}
+	@Override
+	public void setCreatedBy(String createdBy) {
+		System.out.println("Running setCreatedBy in Info");
+	}
+    @Override
+	public void setUpdatedBy(String updatedBy) {
+		System.out.println("Running setCreatedBy in Info");
+
+	}
 
 	@Override
 	public double minAmount() {

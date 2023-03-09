@@ -14,6 +14,11 @@ public class PersonRunner {
 		System.out.println(person.maxGoldLimit());
 		System.out.println(person.minAmount());
 		System.out.println(person.stayingHotel());
+		person.setCreatedBy("Akshata A B.V");
+		person.setUpdatedBy("Hassmukh B.V");
+		person.setCreatedBy("Shubhangi K");
+		person.setUpdatedBy("Shaanu.K.");
+		person.name();
 
 		System.out.println("           ");
 

@@ -1,6 +1,6 @@
 package com.xworkz.inter.things;
 
-public abstract class AbstractInfo {
+public abstract class AbstractInfo extends Developer{
 
 	private String createdBy;
 	private String updatedBy;
@@ -13,6 +13,12 @@ public abstract class AbstractInfo {
 
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
+	}
+	public String getCreatedBy() {
+		return createdBy;
+	}
+	public String getUpdatedBy() {
+		return updatedBy;
 	}
 
 }
