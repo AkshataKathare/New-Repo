@@ -1,4 +1,6 @@
-package com.xworkz.rule.things;
+package com.xworkz.rule.usage;
+
+import com.xworkz.rule.things.EatingRule;
 
 public class Hotel {
 	public EatingRule eatingRule;

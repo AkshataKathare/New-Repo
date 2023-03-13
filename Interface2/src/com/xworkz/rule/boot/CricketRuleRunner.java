@@ -2,7 +2,7 @@ package com.xworkz.rule.boot;
 
 import com.xworkz.rule.implementation.Cricketer;
 import com.xworkz.rule.things.CricketRule;
-import com.xworkz.rule.things.CricketGround;
+import com.xworkz.rule.usage.CricketGround;
 
 public class CricketRuleRunner {
 

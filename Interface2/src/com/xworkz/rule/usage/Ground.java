@@ -1,6 +1,7 @@
-package com.xworkz.rule.things;
+package com.xworkz.rule.usage;
 
 import com.xworkz.rule.implementation.Trainee;
+import com.xworkz.rule.things.HoliRule;
 
 public class Ground {
 

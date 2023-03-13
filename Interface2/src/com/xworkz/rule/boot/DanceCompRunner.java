@@ -2,7 +2,7 @@ package com.xworkz.rule.boot;
 
 import com.xworkz.rule.implementation.Dancer;
 import com.xworkz.rule.things.DanceCompRule;
-import com.xworkz.rule.things.DanceHall;
+import com.xworkz.rule.usage.DanceHall;
 
 public class DanceCompRunner {
 

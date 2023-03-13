@@ -2,7 +2,7 @@ package com.xworkz.rule.boot;
 
 import com.xworkz.rule.implementation.Examiner;
 import com.xworkz.rule.things.ExamRule;
-import com.xworkz.rule.things.Institute;
+import com.xworkz.rule.usage.Institute;
 
 public class ExamRuleRunner {
 

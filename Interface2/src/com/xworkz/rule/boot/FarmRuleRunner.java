@@ -1,8 +1,8 @@
 package com.xworkz.rule.boot;
 
 import com.xworkz.rule.implementation.Farmer;
-import com.xworkz.rule.things.FarmLand;
 import com.xworkz.rule.things.FarmRule;
+import com.xworkz.rule.usage.FarmLand;
 
 public class FarmRuleRunner {
 

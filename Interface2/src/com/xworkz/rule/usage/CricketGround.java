@@ -1,4 +1,6 @@
-package com.xworkz.rule.things;
+package com.xworkz.rule.usage;
+
+import com.xworkz.rule.things.CricketRule;
 
 public class CricketGround {
 

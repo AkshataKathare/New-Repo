@@ -2,7 +2,7 @@ package com.xworkz.rule.boot;
 
 import com.xworkz.rule.implementation.Customer;
 import com.xworkz.rule.things.EatingRule;
-import com.xworkz.rule.things.Hotel;
+import com.xworkz.rule.usage.Hotel;
 
 public class EatingRuleRunner {
 
