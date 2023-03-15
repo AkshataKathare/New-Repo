@@ -1,4 +1,4 @@
-package com.xworkz.application.impl;
+package com.xworkz.application.service;
 
 import java.time.LocalDate;
 
@@ -6,7 +6,6 @@ import com.xworkz.application.constant.Language;
 import com.xworkz.application.constant.OSType;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
-import com.xworkz.application.service.ApplicationService;
 
 public class ApplicationServiceImpl implements ApplicationService {
 

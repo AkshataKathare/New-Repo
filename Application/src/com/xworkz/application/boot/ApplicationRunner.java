@@ -6,8 +6,8 @@ import com.xworkz.application.constant.Language;
 import com.xworkz.application.constant.OSType;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
-import com.xworkz.application.impl.ApplicationServiceImpl;
 import com.xworkz.application.service.ApplicationService;
+import com.xworkz.application.service.ApplicationServiceImpl;
 
 public class ApplicationRunner {
 
