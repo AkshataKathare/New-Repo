@@ -4,8 +4,15 @@ import java.time.LocalDate;
 
 import com.xworkz.application.constant.WeaponType;
 import com.xworkz.application.dto.WeaponDTO;
+import com.xworkz.application.repository.WeaponRepository;
 
 public class WeoponServiceImpl implements WeaponService {
+
+	private WeaponRepository weaponRepository;
+
+	public WeoponServiceImpl(WeaponRepository weaponRepository) {
+		this.weaponRepository = weaponRepository;
+	}
 
 	@Override
 	public boolean validateAndThenSave(WeaponDTO dto) {
@@ -111,7 +118,8 @@ public class WeoponServiceImpl implements WeaponService {
 			if (validCost && validID && validMadeBy && validManufacturedBy && validManufacturedYear && validMaterial
 					&& validName && validType && validUsedBy && validUsedFor && validWeight) {
 				System.out.println("Everything is valid and dto can be saved");
-				return true;
+				boolean saved = this.weaponRepository.save(dto);
+				return saved;
 			} else {
 				System.err.println("Something is invalid");
 			}

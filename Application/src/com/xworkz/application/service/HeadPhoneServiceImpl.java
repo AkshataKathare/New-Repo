@@ -6,9 +6,17 @@ import com.xworkz.application.constant.Brand;
 import com.xworkz.application.constant.Color;
 import com.xworkz.application.constant.TypeAndWeight;
 import com.xworkz.application.dto.HeadPhoneDTO;
+import com.xworkz.application.repository.HeadPhoneRepository;
+
 import static com.xworkz.application.util.ValidationUtil.*;
 
 public class HeadPhoneServiceImpl implements HeadPhoneService {
+
+	private HeadPhoneRepository headPhoneRepository;
+
+	public HeadPhoneServiceImpl(HeadPhoneRepository headPhoneRepository) {
+		this.headPhoneRepository = headPhoneRepository;
+	}
 
 	@Override
 	public boolean validateAndThenSave(HeadPhoneDTO dto) {
@@ -99,7 +107,8 @@ public class HeadPhoneServiceImpl implements HeadPhoneService {
 			if (validFlag(validBass, validBrand, validColor, validCustomerName, validInvoiceno, validMfgDate,
 					validModelNo, validPrice, validTypeAndWeight, validWarrantyPeriod)) {
 				System.out.println("valid dto");
-				return true;
+				boolean saved = this.headPhoneRepository.save(dto);
+				return saved;
 			} else {
 				System.err.println("invalid dto");
 				return false;

@@ -6,8 +6,15 @@ import com.xworkz.application.constant.Language;
 import com.xworkz.application.constant.OSType;
 import com.xworkz.application.constant.Type;
 import com.xworkz.application.dto.ApplicationDTO;
+import com.xworkz.application.repository.ApplicationRepository;
 
 public class ApplicationServiceImpl implements ApplicationService {
+
+	private ApplicationRepository applicationRepository;
+
+	public ApplicationServiceImpl(ApplicationRepository applicationRepository) {
+		this.applicationRepository = applicationRepository;
+	}
 
 	@Override
 	public boolean validateAndThenSave(ApplicationDTO dto) {
@@ -169,8 +176,9 @@ public class ApplicationServiceImpl implements ApplicationService {
 			if (validAgeLimit && validCreatedDate && validCurrentVersion && validDownloads && validFirstVersion
 					&& validInternetNeeded && validLangUsed && validMinProcessorSpeed && validMinRamSpace && validName
 					&& validNextVersion && validOSType && validPrice && validRating && validSize && validTrialDays
-					&& validType && validVersion) {
-				return true;
+					&& validType && validVersion && validDevelopedBy) {
+				boolean saved = this.applicationRepository.save(dto);
+				return saved;
 			}
 			return false;
 
