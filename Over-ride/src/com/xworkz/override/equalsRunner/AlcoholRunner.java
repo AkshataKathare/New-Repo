@@ -6,6 +6,7 @@ public class AlcoholRunner {
 	public static void main(String[] args) {
 		Alcohol alcohol1 = new Alcohol("Black & White", 30, false, 'C');
 		System.out.println(alcohol1);
+		System.out.println(alcohol1.hashCode() + "Original hash of alcohol1 :" + System.identityHashCode(alcohol1));
 
 		Alcohol alcohol2 = new Alcohol("Black & White", 30, false, 'C');
 		System.out.println(alcohol2);

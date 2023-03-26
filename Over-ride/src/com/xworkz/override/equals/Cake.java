@@ -44,6 +44,7 @@ public class Cake {
 				if (left.flavour.equals(right.flavour) && left.shape.equals(right.shape) && left.weight == right.weight
 						&& left.birthday == right.birthday) {
 					System.out.println("left and right are same");
+					return true;
 				} else {
 					System.err.println("left and right are not same");
 				}

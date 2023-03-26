@@ -31,7 +31,7 @@ public class FootWare {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals in FootWare");
+		System.out.println("Over-riding equals in FootWare"+obj);
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof FootWare) {
@@ -42,6 +42,7 @@ public class FootWare {
 				if (left.brand.equals(right.brand) && left.price == right.price && left.quality == right.quality
 						&& left.size == right.size) {
 					System.out.println("left and right are same");
+					return true;
 				} else {
 					System.err.println("left and right are not same");
 				}

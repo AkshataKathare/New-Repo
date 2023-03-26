@@ -61,6 +61,7 @@ public class ChiefMinister {
 						&& left.country.equals(right.country) && left.wifeName.equals(right.wifeName)
 						&& left.motherName.equals(right.motherName)) {
 					System.out.println("left and right are same");
+					return true;
 				} else {
 					System.err.println("left and right are not same");
 				}

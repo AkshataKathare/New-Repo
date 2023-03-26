@@ -35,7 +35,7 @@ public class Fish {
 
 	@Override
 	public boolean equals(Object obj) {
-		System.out.println("Over-riding equals method in Fish"+obj);
+		System.out.println("Over-riding equals method in Fish" + obj);
 		if (obj != null) {
 			System.out.println("obj is not null");
 			if (obj instanceof Fish) {
@@ -46,6 +46,7 @@ public class Fish {
 				if (left.name.equals(right.name) && left.color.equals(right.color) && left.length == right.length
 						&& left.weight == right.weight && left.lakeFish == right.lakeFish) {
 					System.out.println("left and right are same");
+					return true;
 				} else {
 					System.err.println("left and right are not same");
 				}
