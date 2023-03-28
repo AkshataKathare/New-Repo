@@ -42,7 +42,7 @@ public class ValidationUtil {
 		for (int index = 0; index < flags.length; index++) {
 			boolean element = flags[index];
 			if (!element) {
-				System.out.println("Invalid element at index :"+index);
+				System.out.println("Invalid element at index :" + index);
 				return false;
 			}
 		}
