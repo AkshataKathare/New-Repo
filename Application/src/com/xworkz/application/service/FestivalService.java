@@ -7,4 +7,8 @@ public interface FestivalService {
 
 	boolean validateAndThenSave(FestivalDTO dto) throws InvalidFestivalException;
 
+	default int getTotalCount() {
+		return 0;
+	}
+
 }

@@ -70,8 +70,13 @@ public class FestivalServiceImpl implements FestivalService {
 			}
 			if (validFlag(validEndDate && validGodName && validID && validName && validStartDate && validSweet)) {
 				System.out.println("dto is valid and can be saved");
-				boolean saved = this.festivalRepository.save(dto);
-				return saved;
+				boolean exists = this.festivalRepository.isExist(dto);
+				if (!exists) {
+					boolean saved = this.festivalRepository.save(dto);
+					return saved;
+				} else {
+					System.err.println("dto cannot be saved :" + dto);
+				}
 			} else {
 				throw new InvalidFestivalException("data is invalid");
 			}
@@ -79,6 +84,11 @@ public class FestivalServiceImpl implements FestivalService {
 			System.err.println("dto is null");
 		}
 		return false;
+	}
+
+	@Override
+	public int getTotalCount() {
+		return this.festivalRepository.getTotal();
 	}
 
 }

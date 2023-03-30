@@ -177,8 +177,13 @@ public class ApplicationServiceImpl implements ApplicationService {
 					&& validInternetNeeded && validLangUsed && validMinProcessorSpeed && validMinRamSpace && validName
 					&& validNextVersion && validOSType && validPrice && validRating && validSize && validTrialDays
 					&& validType && validVersion && validDevelopedBy) {
-				boolean saved = this.applicationRepository.save(dto);
-				return saved;
+				boolean exists = this.applicationRepository.isExist(dto);
+				if (!exists) {
+					boolean saved = this.applicationRepository.save(dto);
+					return saved;
+				} else {
+					System.err.println("dto is duplicate :" + dto);
+				}
 			}
 			return false;
 
