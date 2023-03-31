@@ -6,8 +6,4 @@ public interface ApplicationRepository {
 
 	boolean save(ApplicationDTO dto);
 
-	default boolean isExist(ApplicationDTO dto) {
-		return false;
-	}
-
 }

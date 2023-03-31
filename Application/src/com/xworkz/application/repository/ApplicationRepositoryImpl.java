@@ -20,24 +20,4 @@ public class ApplicationRepositoryImpl implements ApplicationRepository {
 		return false;
 	}
 
-	@Override
-	public boolean isExist(ApplicationDTO dto) {
-		if (applicationIndex == 0) {
-			System.out.println("first index element and will not compare");
-		} else {
-			System.out.println("comparing first element onwards");
-			for (int index = 0; index < this.applicationIndex; index++) {
-				ApplicationDTO tempDTO = this.applicationDTOs[index];
-				if (tempDTO.equals(dto)) {
-					System.out.println("dto can be saved as it is not a duplicate of any dto :" + tempDTO);
-					return true;
-				} else {
-
-					return false;
-				}
-			}
-		}
-		return ApplicationRepository.super.isExist(dto);
-	}
-
 }
