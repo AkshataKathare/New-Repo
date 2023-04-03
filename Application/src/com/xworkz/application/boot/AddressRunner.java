@@ -31,10 +31,9 @@ public class AddressRunner {
 		System.out.println(addressService.findByPinCode(12237));
 		System.out.println(" ");
 		System.out.println(addressService.findByStreet("Gandhi Chowk"));
-		// System.out.println(addressService.findByStreetAndPinCodeAndArea(12237,
-		// "Gandhi Chowk", "Raviwar Peth"));
-		// System.out.println(addressService.findCityByNumberAndFloorAndStreetAndPinCode(0,
-		// 0, null, 0));
+
+		System.out.println(addressService.findByStreetAndPinCodeAndArea(12237, "Gandhi Chowk", "Raviwar Peth"));
+		System.out.println(addressService.findCityByNumberAndFloorAndStreetAndPinCode(12, 2, "Gandhi Chowk", 12237));
 
 		System.out.println(" **************** ");
 

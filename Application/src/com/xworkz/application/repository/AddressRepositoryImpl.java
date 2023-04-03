@@ -60,6 +60,13 @@ public class AddressRepositoryImpl implements AddressRepository {
 
 	@Override
 	public boolean find(AddressDTO dto) {
+		for (int index = 0; index < this.addressDTOs.length; index++) {
+			AddressDTO element = this.addressDTOs[index];
+			if (element.equals(dto)) {
+				System.out.println("this dto is present :" + dto);
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -98,8 +105,9 @@ public class AddressRepositoryImpl implements AddressRepository {
 	@Override
 	public AddressDTO findByStreetAndPinCodeAndArea(int pinCode, String area, String street) {
 		for (int index = 0; index < this.addressDTOs.length; index++) {
-			AddressDTO ele3 = this.addressDTOs[index];
-			if (ele3.getPinCode() == pinCode && ele3.getArea().equals(area) && ele3.getStreet().equals(street)) {
+			AddressDTO ele3 = this.addressDTOs[index];// 0=dto,1=dto,2=null,3=null,...9=null
+			if (ele3 != null && ele3.getPinCode() == pinCode && ele3.getArea().equals(area)
+					&& ele3.getStreet().equals(street)) {
 				System.out.println(
 						"This pinCode,area and street is present in dto :" + pinCode + " " + area + " " + street);
 				return ele3;

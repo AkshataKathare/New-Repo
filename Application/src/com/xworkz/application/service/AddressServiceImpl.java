@@ -79,12 +79,12 @@ public class AddressServiceImpl implements AddressService {
 			if (validFlags(
 					validArea && validCity && validFloor && validNumber && validPinCode && validState && validStreet)) {
 				System.out.println("Valid dto");
-				boolean exists = this.addressRepository.save(dto);
+				boolean exists = this.addressRepository.isExist(dto);
 				if (!exists) {
-					boolean saved = this.addressRepository.isExist(dto);
+					boolean saved = this.addressRepository.save(dto);
 					System.out.println(saved);
+					return true;
 				}
-				return true;
 			} else {
 				System.err.println("invalid dto");
 			}
@@ -101,47 +101,72 @@ public class AddressServiceImpl implements AddressService {
 
 	@Override
 	public AddressDTO findByNumber(int number) {
-		return this.addressRepository.findByNumber(number);
+		if (validInt(number)) {
+			return this.addressRepository.findByNumber(number);
+		}
+		return null;
 	}
 
 	@Override
 	public boolean find(AddressDTO dto) {
-		return true;
+		return this.addressRepository.find(dto);
 	}
 
 	@Override
 	public AddressDTO findByStreet(String street) {
-		return this.addressRepository.findByStreet(street);
+		if (validString(street)) {
+			return this.addressRepository.findByStreet(street);
+		}
+		return null;
 	}
 
 	@Override
 	public AddressDTO findByPinCode(int pinCode) {
-		return this.addressRepository.findByPinCode(pinCode);
+		if (validInt(pinCode)) {
+			return this.addressRepository.findByPinCode(pinCode);
+		}
+		return null;
 	}
 
 	@Override
 	public AddressDTO findByStreetAndPinCodeAndArea(int pinCode, String area, String street) {
-		return this.addressRepository.findByStreetAndPinCodeAndArea(pinCode, area, street);
+		if (validInt(pinCode) && validString(street) && validString(area)) {
+			return this.addressRepository.findByStreetAndPinCodeAndArea(pinCode, area, street);
+		}
+		return null;
 	}
 
 	@Override
 	public AddressDTO findByCityAndState(String city, String state) {
-		return this.addressRepository.findByCityAndState(city, state);
+		if (validString(state) && validString(city)) {
+			return this.addressRepository.findByCityAndState(city, state);
+		}
+		return null;
 	}
 
 	@Override
 	public int findFloorByNumber(int number) {
-		return this.addressRepository.findFloorByNumber(number);
+		if (validInt(number)) {
+			return this.addressRepository.findFloorByNumber(number);
+		}
+		return 0;
+
 	}
 
 	@Override
 	public String findCityByNumberAndFloorAndStreetAndPinCode(int number, int floor, String street, int pinCode) {
-		return this.addressRepository.findCityByNumberAndFloorAndStreetAndPinCode(number, floor, street, pinCode);
+		if (validString(street) && validInt(number) && validInt(floor) && validInt(pinCode)) {
+			return this.addressRepository.findCityByNumberAndFloorAndStreetAndPinCode(number, floor, street, pinCode);
+		}
+		return null;
 	}
 
 	@Override
 	public int findPinCodeByNumber(int number) {
-		return this.addressRepository.findPinCodeByNumber(number);
+		if (validInt(number)) {
+			return this.addressRepository.findPinCodeByNumber(number);
+		}
+		return 0;
 	}
 
 }
