@@ -150,10 +150,12 @@ public class EducationRunner {
 			System.out.println(saved18);
 
 			boolean saved19 = educationService19.validateAndThenSave(educationDTO19);
-			System.out.println(saved15);
+			System.out.println(saved19);
 
 			boolean saved20 = educationService20.validateAndThenSave(educationDTO20);
 			System.out.println(saved20);
+
+			System.out.println("************");
 
 		} catch (InvalidEducationException e) {
 			System.out.println(e.getMessage());
