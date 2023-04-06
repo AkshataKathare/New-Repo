@@ -23,7 +23,7 @@ public class ValidationUtil {
 	}
 
 	public static boolean validNumber(int no) {
-		if (no > 0 && no < 10) {
+		if (no > 0 && no < 80) {
 			return true;
 		}
 		return false;
