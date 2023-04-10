@@ -105,12 +105,12 @@ public class IndependenceServiceImpl implements IndependenceService {
 
 	@Override
 	public IndependenceDTO[] findAll() {
-		IndependenceDTO[] ownDTO = new IndependenceDTO[10];
+		IndependenceDTO[] ownDTO = new IndependenceDTO[3];
 		IndependenceDTO[] repoDTO = this.independenceRepository.findAll();
 		int i = 0;
 		if (i < repoDTO.length) {
 
-			for (int j = 0; j < ownDTO.length; j++) {
+			for (int j = 0; j < repoDTO.length; j++) {
 				if (repoDTO[j] != null) {
 					ownDTO[i] = repoDTO[j];
 					System.out.println(ownDTO[i]);
@@ -118,7 +118,7 @@ public class IndependenceServiceImpl implements IndependenceService {
 				}
 			}
 		}
-		return repoDTO;
+		return ownDTO;
 	}
 
 	@Override

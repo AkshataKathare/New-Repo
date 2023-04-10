@@ -9,7 +9,7 @@ import com.xworkz.application.exception.IndependenceMemoryFullException;
 
 public class IndependenceRepositoryImpl implements IndependenceRepository {
 
-	private IndependenceDTO independenceDTOs[] = new IndependenceDTO[30];
+	private IndependenceDTO independenceDTOs[] = new IndependenceDTO[3];
 	private int indepIndex = 0;
 
 	@Override
