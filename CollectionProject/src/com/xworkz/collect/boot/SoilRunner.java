@@ -67,13 +67,14 @@ public class SoilRunner {
 		Collection<String> colle1 = new ArrayList<>();
 		colle1.add("Dharwad");
 		colle1.add("Shimoga");
+		colle1.add("Bengaluru");
 
 		Collection<String> colle2 = new ArrayList<>();
 		colle2.add("Dharwad");
 		colle2.add("Shimoga");
 
 		System.out.println("colle1 containsAll() :" + colle1.containsAll(colle2));
-		System.out.println("colle2 containsAll() :" + colle2.containsAll(soiTy));
+		System.out.println("colle2 containsAll() :" + colle2.containsAll(colle1));
 		// removeAll
 		Collection<String> rem1 = new ArrayList<>();
 		rem1.add("India");
@@ -84,6 +85,10 @@ public class SoilRunner {
 		rem2.add("India");
 		rem2.add("Sri Lanka");
 		rem2.add("Afghanistan");
+
+//		rem2.removeAll(rem1);
+//		System.out.println("rem1 :" + rem1);
+//		System.out.println("rem2 :" + rem2);
 
 		rem1.removeAll(rem2);
 		System.out.println("rem1 :" + rem1);

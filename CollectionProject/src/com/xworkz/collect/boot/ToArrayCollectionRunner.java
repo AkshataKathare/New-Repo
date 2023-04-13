@@ -25,7 +25,7 @@ public class ToArrayCollectionRunner {
 
 		System.out.println("toArray(array)");
 
-		Integer[] shoeSize = menShoeSize.toArray(new Integer[0]);
+		Integer[] shoeSize = menShoeSize.toArray(new Integer[10]);
 		for (int j = 0; j < shoeSize.length; j++) {
 			System.out.println(shoeSize[j]);
 		}
