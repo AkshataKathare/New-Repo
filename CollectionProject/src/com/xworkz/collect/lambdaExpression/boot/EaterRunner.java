@@ -7,12 +7,10 @@ public class EaterRunner {
 	public static void main(String[] args) {
 
 		EaterUtil.test((item, quan) -> {
-			System.out.println("item in Upper case :" + item.toUpperCase());
-			return item;
+			return item.toUpperCase();
 		});
 		EaterUtil.test((item1, quan1) -> {
-			System.out.println(item1.toLowerCase());
-			return item1;
+			return item1.toLowerCase();
 		});
 	}
 

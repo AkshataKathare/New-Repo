@@ -5,7 +5,8 @@ import com.xworkz.collect.lambdaExpression.inter.Gambler;
 public class GamblerUtil {
 
 	public static void test(Gambler gambler) {
-		gambler.lost(2000);
+		double money = gambler.lost(2000);
+		System.out.println(money);
 	}
 
 }

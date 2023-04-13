@@ -7,8 +7,7 @@ public class RunRunner {
 	public static void main(String[] args) {
 
 		RunnerUtil.test((dist) -> {
-			System.out.println(dist);
-			return 0;
+			return dist;
 		});
 	}
 

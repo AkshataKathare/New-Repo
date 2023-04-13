@@ -8,12 +8,12 @@ public class GamblerRunner {
 
 		GamblerUtil.test((principal) -> {
 			if (principal < 1000) {
-				System.out.println(0);
+				return 0;
 			}
 			if (principal > 1000) {
-				System.out.println(100);
+				return 100;
 			}
-			return 0;
+			return 200;
 		});
 
 	}
