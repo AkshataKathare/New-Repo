@@ -1,7 +1,7 @@
-package com.xworkz.collect.lambdaExpression.boot;
+package com.xworkz.collection.boot;
 
-import com.xworkz.collect.lambdaExpression.inter.Hunter;
-import com.xworkz.collect.lambdaExpression.util.Util;
+import com.xworkz.collection.function.Hunter;
+import com.xworkz.collection.util.Util;
 
 public class HunterRunner {
 

@@ -1,6 +1,6 @@
-package com.xworkz.collect.lambdaExpression.boot;
+package com.xworkz.collection.boot;
 
-import com.xworkz.collect.lambdaExpression.util.EaterUtil;
+import com.xworkz.collection.util.EaterUtil;
 
 public class EaterRunner {
 

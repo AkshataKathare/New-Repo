@@ -1,6 +1,6 @@
-package com.xworkz.collect.lambdaExpression.boot;
+package com.xworkz.collection.boot;
 
-import com.xworkz.collect.lambdaExpression.util.GamblerUtil;
+import com.xworkz.collection.util.GamblerUtil;
 
 public class GamblerRunner {
 

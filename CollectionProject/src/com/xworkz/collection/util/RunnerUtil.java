@@ -1,6 +1,6 @@
-package com.xworkz.collect.lambdaExpression.util;
+package com.xworkz.collection.util;
 
-import com.xworkz.collect.lambdaExpression.inter.Runner;
+import com.xworkz.collection.function.Runner;
 
 public class RunnerUtil {
 
