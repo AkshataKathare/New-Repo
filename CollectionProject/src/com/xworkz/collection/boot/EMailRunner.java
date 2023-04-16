@@ -60,12 +60,14 @@ public class EMailRunner {
 		emails.stream().filter(emai -> !emai.endsWith("xworkz.com") && !emai.endsWith("gmail.com"))
 				.collect(Collectors.toList()).forEach(e -> System.out.println(e));
 
-		Collection<String> un = new HashSet<>(emails);
-		for (String unique : un) {
-			boolean ends = unique.endsWith("@gmail.com");
-			if (ends == true) {
-				System.out.println(unique);
-			}
-		}
+		System.out.println("printing only the names");
+
+		emails.stream().map(e -> e.split("@")).forEach(re -> System.out.println(re[0]));
+
+		System.out.println("Printing only the unique domains");
+
+		emails.stream().map(ele -> ele.split("@")[1]).collect(Collectors.toSet())
+				.forEach(ref -> System.out.println(ref));
+
 	}
 }
