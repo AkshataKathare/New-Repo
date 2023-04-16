@@ -309,7 +309,7 @@ public class MLARunner {
 
 		System.out.println("All independent MLAs");
 
-		mladtos.stream().filter(e -> !e.isIndependent()).collect(Collectors.toList())
+		mladtos.stream().filter(e -> e.isIndependent()).collect(Collectors.toList())
 				.forEach(mla -> System.out.println("Independent MLA :" + mla.getName()));
 
 	}
