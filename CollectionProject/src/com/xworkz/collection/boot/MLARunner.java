@@ -307,15 +307,10 @@ public class MLARunner {
 
 		System.out.println("******* ");
 
-		System.out.println("All independent MLAs");
-
-		mladtos.stream().filter(e -> e.isIndependent()).collect(Collectors.toList())
-				.forEach(mla -> System.out.println("Independent MLA :" + mla.getName()));
-
-		System.out.println("MLA by constituency Name");
-
-		mladtos.stream().filter(re -> re.getConstituency().contains("Bantval")).collect(Collectors.toList())
-				.forEach(e -> System.out.println(e.getName()));
+//		System.out.println("All independent MLAs");
+//
+//		mladtos.stream().filter(mla -> mla.isIndependent()).collect(Collectors.toList())
+//				.forEach(e -> System.out.println(e.getName()));
 	}
 
 }
