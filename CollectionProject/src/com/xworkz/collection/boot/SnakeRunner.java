@@ -30,6 +30,7 @@ public class SnakeRunner {
 			boolean saved3 = service.validatateAndThenSave(dto3);
 			System.out.println(saved3);
 		} catch (InvalidSnakeDataException e) {
+			e.getMessage();
 			e.printStackTrace();
 		}
 

@@ -3,7 +3,7 @@ package com.xworkz.collection.dto;
 import java.io.Serializable;
 import java.util.Objects;
 
-public class GroceryDTO implements Serializable {
+public class GroceryDTO implements Serializable, Comparable<GroceryDTO> {
 
 	private int id;
 	private String name;
@@ -76,6 +76,14 @@ public class GroceryDTO implements Serializable {
 
 	public void setQuantity(float quantity) {
 		this.quantity = quantity;
+	}
+
+	@Override
+	public int compareTo(GroceryDTO o) {
+		if (this.name != null) {
+			return this.getName().compareTo(o.getName());
+		}
+		return 0;
 	}
 
 }
