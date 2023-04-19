@@ -2,6 +2,7 @@ package com.xworkz.collection.repository;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -27,45 +28,41 @@ public class SnakeRepositoryImpl implements SnakeRepository {
 	@Override
 	public Optional<SnakeDTO> findById(int id) {
 
-		for (SnakeDTO snakeDTO : snakes) {
-			if (snakeDTO.getId() == id) {
-				return Optional.of(snakeDTO);
-			}
-		}
-		return Optional.empty();
+//		for (SnakeDTO snakeDTO : snakes) {
+//			if (snakeDTO.getId() == id) {
+//				return Optional.of(snakeDTO);
+//			}
+//		}
+		return this.snakes.stream().filter(snake -> snake.getId() == id).findFirst();
 	}
 
 	@Override
 	public Optional<SnakeDTO> findByName(String name) {
 
-		for (SnakeDTO snakeDTO : snakes) {
-			if (snakeDTO.getName().equals(name)) {
-				return Optional.of(snakeDTO);
-			}
-		}
-		return SnakeRepository.super.findByName(name);
+//		for (SnakeDTO snakeDTO : snakes) {
+//			if (snakeDTO.getName().equals(name)) {
+//				return Optional.of(snakeDTO);
+//			}
+//		}
+		return this.snakes.stream().filter(sn -> sn.getName().equals(name)).findFirst();
 	}
 
 	@Override
 	public Optional<SnakeDTO> findByNameAndPlace(String name, String place) {
-
-		for (SnakeDTO snakeDTO : snakes) {
-			if (snakeDTO.getName().equals(name) && snakeDTO.getPlace().equals(place)) {
-				return Optional.of(snakeDTO);
-			}
-		}
-		return SnakeRepository.super.findByNameAndPlace(name, place);
+		return this.snakes.stream().filter(e -> e.getName().equals(name) && e.getPlace().equals(place)).findFirst();
+//		for (SnakeDTO snakeDTO : snakes) {
+//			if (snakeDTO.getName().equals(name) && snakeDTO.getPlace().equals(place)) {
+//				return Optional.of(snakeDTO);
+//			}
+//		}
+//		return SnakeRepository.super.findByNameAndPlace(name, place);
 	}
 
 	@Override
 	public Optional<Collection<SnakeDTO>> findByType(String type) {
-		for (SnakeDTO snakeDTO : snakes) {
-			if (snakeDTO.getType().equals(type)) {
-
-				return Optional.of(null);
-			}
-		}
-		return SnakeRepository.super.findByType(type);
+		Collection<SnakeDTO> optional = this.snakes.stream().filter(e -> e.getType().equals(type))
+				.collect(Collectors.toList());
+		return Optional.of(optional);
 	}
 
 }
