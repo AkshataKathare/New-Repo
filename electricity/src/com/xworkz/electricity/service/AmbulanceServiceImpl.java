@@ -23,7 +23,7 @@ public class AmbulanceServiceImpl implements AmbulanceService {
 	public boolean validateAndThenSave(AmbulanceDTO dto) {
 
 		if (dto != null) {
-			System.out.println("dto is not null");
+			System.out.println("dto is not null " + dto);
 
 			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 			Validator validator = factory.getValidator();
@@ -36,9 +36,12 @@ public class AmbulanceServiceImpl implements AmbulanceService {
 			if (violations.isEmpty()) {
 				System.out.println("No violations in dto and hence dto will be saved");
 				return this.ambulanceRepository.save(dto);
+			} else {
+				System.err.println("There exists violations");
+				return false;
 			}
 		}
-		System.err.println("Due to violations,dto is not be saved");
+		System.err.println("dto is null");
 		return false;
 	}
 

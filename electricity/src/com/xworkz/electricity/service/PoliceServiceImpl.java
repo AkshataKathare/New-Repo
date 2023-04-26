@@ -20,7 +20,7 @@ public class PoliceServiceImpl implements PoliceStationService {
 
 	@Override
 	public boolean validateAndThenSave(PoliceStationDTO dto) {
-		System.out.println("Running validateAndThenSave in Service");
+		System.out.println("Running validateAndThenSave in Service" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
 
@@ -35,10 +35,12 @@ public class PoliceServiceImpl implements PoliceStationService {
 			if (constraints.isEmpty()) {
 				System.out.println("No violations in constraints");
 				return this.policeStationRepository.save(dto);
+			} else {
+				System.err.println("There exists violation");
+				return false;
 			}
-
 		}
-		System.err.println("There exists violation and hence will not be saved");
+		System.err.println("dto is null");
 		return false;
 	}
 

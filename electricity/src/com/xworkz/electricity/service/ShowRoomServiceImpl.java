@@ -20,7 +20,7 @@ public class ShowRoomServiceImpl implements ShowRoomService {
 
 	@Override
 	public boolean validateAndThenSave(ShowRoomDTO dto) {
-		System.out.println("Running validateAndThenSave in Service");
+		System.out.println("Running validateAndThenSave in Service" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
 
@@ -34,9 +34,12 @@ public class ShowRoomServiceImpl implements ShowRoomService {
 			if (constraints.isEmpty()) {
 				System.out.println("No violations in constraints of DTO");
 				return this.repository.save(dto);
+			} else {
+				System.err.println("There exists violation");
+				return false;
 			}
 		}
-		System.err.println("DTO is having violations");
+		System.err.println("dto is null");
 		return false;
 	}
 

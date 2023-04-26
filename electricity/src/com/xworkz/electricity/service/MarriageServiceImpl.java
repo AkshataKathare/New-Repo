@@ -21,7 +21,7 @@ public class MarriageServiceImpl implements MarriageService {
 
 	@Override
 	public boolean validateAndSave(MarriageDTO dto) {
-		System.out.println("Running validateAndSave method in Service");
+		System.out.println("Running validateAndSave method in Service" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
 
@@ -35,9 +35,12 @@ public class MarriageServiceImpl implements MarriageService {
 			if (constraints.isEmpty()) {
 				System.out.println("No violations in dto");
 				return this.marriageRepository.save(dto);
+			} else {
+				System.err.println("There exists violation");
+				return false;
 			}
 		}
-		System.err.println("Due to violations,dto cannot be saved");
+		System.err.println("dto is null");
 		return false;
 	}
 
