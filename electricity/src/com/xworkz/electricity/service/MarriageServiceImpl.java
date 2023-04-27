@@ -9,10 +9,12 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.electricity.dto.MarriageDTO;
 import com.xworkz.electricity.repository.MarriageRepository;
+import com.xworkz.electricity.validation.DTOValidation;
 
 public class MarriageServiceImpl implements MarriageService {
 
 	private MarriageRepository marriageRepository;
+	private DTOValidation<MarriageDTO> dtoValidation = new DTOValidation<>();
 
 	public MarriageServiceImpl(MarriageRepository marriageRepository) {
 		System.out.println("Running MarriageServImpl const with marriageRepository");
@@ -24,15 +26,7 @@ public class MarriageServiceImpl implements MarriageService {
 		System.out.println("Running validateAndSave method in Service" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
-
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-
-			Set<ConstraintViolation<MarriageDTO>> constraints = validator.validate(dto);
-			System.out.println("Total violations in constraints :" + constraints.size());
-			constraints.forEach(c -> System.err.println(c.getPropertyPath() + " " + c.getMessage()));
-
-			if (constraints.isEmpty()) {
+			if (dtoValidation.valid(dto)) {
 				System.out.println("No violations in dto");
 				return this.marriageRepository.save(dto);
 			} else {

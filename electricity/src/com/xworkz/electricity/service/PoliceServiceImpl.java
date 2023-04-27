@@ -8,10 +8,12 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import com.xworkz.electricity.dto.PoliceStationDTO;
 import com.xworkz.electricity.repository.PoliceStationRepository;
+import com.xworkz.electricity.validation.DTOValidation;
 
 public class PoliceServiceImpl implements PoliceStationService {
 
 	private PoliceStationRepository policeStationRepository;
+	private DTOValidation<PoliceStationDTO> dtoValidation = new DTOValidation<>();
 
 	public PoliceServiceImpl(PoliceStationRepository policeStationRepository) {
 		System.out.println("PoliceServiceImpl const with policeStationRepository");
@@ -23,16 +25,7 @@ public class PoliceServiceImpl implements PoliceStationService {
 		System.out.println("Running validateAndThenSave in Service" + dto);
 		if (dto != null) {
 			System.out.println("dto is not null");
-
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-
-			Set<ConstraintViolation<PoliceStationDTO>> constraints = validator.validate(dto);
-
-			System.out.println("Total violations :" + constraints.size());
-			constraints.forEach(cv -> System.err.println(cv.getPropertyPath() + " " + cv.getMessage()));
-
-			if (constraints.isEmpty()) {
+			if (dtoValidation.valid(dto)) {
 				System.out.println("No violations in constraints");
 				return this.policeStationRepository.save(dto);
 			} else {

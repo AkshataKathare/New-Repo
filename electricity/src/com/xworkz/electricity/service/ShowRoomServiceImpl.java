@@ -8,10 +8,12 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import com.xworkz.electricity.dto.ShowRoomDTO;
 import com.xworkz.electricity.repository.ShowRoomRepository;
+import com.xworkz.electricity.validation.DTOValidation;
 
 public class ShowRoomServiceImpl implements ShowRoomService {
 
 	private ShowRoomRepository repository;
+	private DTOValidation<ShowRoomDTO> dtoValidation=new DTOValidation<>();
 
 	public ShowRoomServiceImpl(ShowRoomRepository repository) {
 		System.out.println("Running ShowRoomServiceImpl const in Service");
@@ -24,14 +26,7 @@ public class ShowRoomServiceImpl implements ShowRoomService {
 		if (dto != null) {
 			System.out.println("dto is not null");
 
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-
-			Set<ConstraintViolation<ShowRoomDTO>> constraints = validator.validate(dto);
-			System.out.println("Total violations :" + constraints.size());
-			constraints.forEach(cons -> System.err.println(cons.getPropertyPath() + " " + cons.getMessage()));
-
-			if (constraints.isEmpty()) {
+			if (dtoValidation.valid(dto)) {
 				System.out.println("No violations in constraints of DTO");
 				return this.repository.save(dto);
 			} else {

@@ -9,10 +9,12 @@ import javax.validation.ValidatorFactory;
 
 import com.xworkz.electricity.dto.AmbulanceDTO;
 import com.xworkz.electricity.repository.AmbulanceRepository;
+import com.xworkz.electricity.validation.DTOValidation;
 
 public class AmbulanceServiceImpl implements AmbulanceService {
 
 	private AmbulanceRepository ambulanceRepository;
+	private DTOValidation<AmbulanceDTO> dtoValidation = new DTOValidation<>();
 
 	public AmbulanceServiceImpl(AmbulanceRepository ambulanceRepository) {
 		System.out.println("Running AmbulanceServiceImpl with ambulanceRepository");
@@ -25,15 +27,7 @@ public class AmbulanceServiceImpl implements AmbulanceService {
 		if (dto != null) {
 			System.out.println("dto is not null " + dto);
 
-			ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-			Validator validator = factory.getValidator();
-
-			Set<ConstraintViolation<AmbulanceDTO>> violations = validator.validate(dto);
-
-			System.out.println("Total violations :" + violations.size());
-			violations.forEach(c -> System.err.println(c.getPropertyPath() + " " + c.getMessage()));
-
-			if (violations.isEmpty()) {
+			if (dtoValidation.valid(dto)) {
 				System.out.println("No violations in dto and hence dto will be saved");
 				return this.ambulanceRepository.save(dto);
 			} else {
