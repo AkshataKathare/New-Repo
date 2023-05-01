@@ -10,7 +10,7 @@ public class AllRunner {
 	public static void main(String[] args) {
 
 		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(SpringConfiguration.class);
-
+		System.out.println(applicationContext.getBeanDefinitionNames());
 	}
 
 }
