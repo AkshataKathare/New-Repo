@@ -3,7 +3,7 @@ package com.xworkz.circuit.boot;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import com.xworkz.configuration.SpringConfiguration;
+import com.xworkz.circuit.configuration.SpringConfiguration;
 
 public class AllRunner {
 

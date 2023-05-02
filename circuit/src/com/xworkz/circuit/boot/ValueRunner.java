@@ -5,6 +5,7 @@ import java.util.stream.Stream;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import com.xworkz.circuit.configuration.ValueConfiguration;
 import com.xworkz.circuit.thing2.Barber;
 import com.xworkz.circuit.thing2.Chair;
 import com.xworkz.circuit.thing2.HairDryer;
@@ -13,7 +14,6 @@ import com.xworkz.circuit.thing2.Saloon;
 import com.xworkz.circuit.thing2.Scissor;
 import com.xworkz.circuit.thing2.ShavingCream;
 import com.xworkz.circuit.thing2.Trimmer;
-import com.xworkz.configuration.ValueConfiguration;
 
 public class ValueRunner {
 
