@@ -48,7 +48,6 @@ public class Flower {
 		this.seedColor = seedColor;
 	}
 
-	@Bean
 	public String place() {
 		System.out.println("Running place method in Flower");
 		return "Davangere";

@@ -1,18 +1,17 @@
 package com.xworkz.circuit.beanConfiguration;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
-import java.util.stream.Stream;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import lombok.val;
 
 @Configuration
 public class CollectionConfiguration {
@@ -79,5 +78,16 @@ public class CollectionConfiguration {
 		numbers.add(123);
 		numbers.add(56);
 		return numbers;
+	}
+
+	@Bean
+	public Map<Integer, String> studentDetails() {
+		System.out.println("Running studentDetails with HashMap");
+		Map<Integer, String> details = new HashMap<>();
+		details.put(2, "Akshata");
+		details.put(30, "Anitha");
+		details.put(29, "Shubhangi");
+
+		return details;
 	}
 }

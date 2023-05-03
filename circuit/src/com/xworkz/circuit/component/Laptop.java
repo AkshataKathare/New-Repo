@@ -42,7 +42,6 @@ public class Laptop {
 		this.mode = mode;
 	}
 
-	@Bean
 	public boolean fullFlip() {
 		System.out.println("Running fullFlip method in Laptop");
 		return false;

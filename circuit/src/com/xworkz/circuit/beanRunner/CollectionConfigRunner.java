@@ -1,6 +1,7 @@
 package com.xworkz.circuit.beanRunner;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
@@ -32,6 +33,9 @@ public class CollectionConfigRunner {
 
 		Set<Integer> nos = applicationContext.getBean("values", Set.class);
 		nos.forEach(System.out::println);
+
+		Map<Integer, String> students = (Map<Integer, String>) applicationContext.getBean("studentDetails");
+		Stream.of(students).forEach(System.out::println);
 	}
 
 }

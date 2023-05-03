@@ -19,6 +19,8 @@ public class Profile {
 			Statement statement = connect.createStatement();
 			System.out.println("Created the statement");
 
+			boolean executed = statement.execute(query);
+			System.out.println(executed);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

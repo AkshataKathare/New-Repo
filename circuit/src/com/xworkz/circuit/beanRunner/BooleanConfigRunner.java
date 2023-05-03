@@ -11,7 +11,8 @@ public class BooleanConfigRunner {
 
 	public static void main(String[] args) {
 
-		ApplicationContext applicationContext = new AnnotationConfigApplicationContext(BooleanConfiguration.class);
+		ApplicationContext applicationContext =
+				new AnnotationConfigApplicationContext(BooleanConfiguration.class);
 		System.out.println(applicationContext.getBeanDefinitionCount());
 
 		Stream.of(applicationContext.getBeanDefinitionNames()).forEach(System.out::println);

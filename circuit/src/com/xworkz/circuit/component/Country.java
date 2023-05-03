@@ -38,7 +38,6 @@ public class Country {
 		System.out.println("Running setLargestState in Country");
 	}
 
-	@Bean
 	public String southNeighbour() {
 		System.out.println("Running southNeighbour in Country");
 		return "Sri Lanka";

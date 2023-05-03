@@ -9,6 +9,18 @@
 <item elementID="=circuit" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=jdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683036962088_5" label="jdbcFramework" name="jdbcFramework">
+<item elementID="=jdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098533039_8" label="museumFramework" name="museumFramework">
+<item elementID="=museum" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674796516668_2" label="Window Working Set" name="Aggregate for window 1674796516668"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098142874_7" label="Multiple Working Sets" name="Aggregate:framework2:jdbcFramework:">
+<workingSet IMemento.internal.id="framework2"/>
+<workingSet IMemento.internal.id="jdbcFramework"/>
+</workingSet>
+<mruList name="museumFramework"/>
+<mruList name="jdbcFramework"/>
 <mruList name="framework2"/>
 </workingSetManager>

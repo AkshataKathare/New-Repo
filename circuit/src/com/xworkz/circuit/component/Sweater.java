@@ -42,7 +42,6 @@ public class Sweater {
 		this.fullSleeves = fullSleeves;
 	}
 
-	@Bean
 	public String shopName() {
 		System.out.println("Running shopName in Sweater");
 		return "Nakoda";

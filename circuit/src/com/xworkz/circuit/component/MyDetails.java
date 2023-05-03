@@ -43,7 +43,6 @@ public class MyDetails {
 		this.sister = sister;
 	}
 
-	@Bean
 	public String houseName() {
 		System.out.println("Running houseName in MyDetails");
 		return "Anuprabha";

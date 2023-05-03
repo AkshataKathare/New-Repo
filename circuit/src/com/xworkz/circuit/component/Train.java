@@ -58,7 +58,6 @@ public class Train {
 		this.ticketPrice = ticketPrice;
 	}
 
-	@Bean
 	public String newColor() {
 		System.out.println("Running newColor in Train");
 		return "Cream";
