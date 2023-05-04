@@ -1,12 +1,5 @@
 package com.xworkz.electricity.service;
 
-import java.util.Set;
-
-import javax.validation.ConstraintViolation;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
-
 import com.xworkz.electricity.dto.MarriageDTO;
 import com.xworkz.electricity.repository.MarriageRepository;
 import com.xworkz.electricity.validation.DTOValidation;
