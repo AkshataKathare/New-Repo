@@ -24,8 +24,16 @@
 <workingSet IMemento.internal.id="framework2"/>
 <workingSet IMemento.internal.id="jdbcFramework"/>
 </workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683211671317_9" label="Multiple Working Sets" name="Aggregate:museumFramework:showroom:">
+<workingSet IMemento.internal.id="museumFramework"/>
+<workingSet IMemento.internal.id="showroom"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683263059935_10" label="Multiple Working Sets" name="Aggregate:jdbcFramework:showroom:">
+<workingSet IMemento.internal.id="jdbcFramework"/>
+<workingSet IMemento.internal.id="showroom"/>
+</workingSet>
+<mruList name="jdbcFramework"/>
 <mruList name="showroom"/>
 <mruList name="museumFramework"/>
-<mruList name="jdbcFramework"/>
 <mruList name="framework2"/>
 </workingSetManager>
