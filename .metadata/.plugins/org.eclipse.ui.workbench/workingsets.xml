@@ -15,6 +15,7 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098533039_8" label="museumFramework" name="museumFramework">
 <item elementID="=museum" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=showroom" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=springJdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683177643626_8" label="showroom" name="showroom">
 <item elementID="=showroom" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -33,7 +34,7 @@
 <workingSet IMemento.internal.id="showroom"/>
 </workingSet>
 <mruList name="jdbcFramework"/>
-<mruList name="showroom"/>
 <mruList name="museumFramework"/>
+<mruList name="showroom"/>
 <mruList name="framework2"/>
 </workingSetManager>
