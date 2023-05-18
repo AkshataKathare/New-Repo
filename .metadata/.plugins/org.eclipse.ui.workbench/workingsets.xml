@@ -23,6 +23,12 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683985994902_11" label="springJdbc" name="springJdbc">
 <item elementID="=springJdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684308300466_12" label="Server" name="Server"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684308510770_13" label="Server1" name="Server1"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1684312460209_14" label="ServerFile" name="ServerFile">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Servers" type="4"/>
+<item elementID="=lucky" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674796516668_2" label="Window Working Set" name="Aggregate for window 1674796516668"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098142874_7" label="Multiple Working Sets" name="Aggregate:framework2:jdbcFramework:">
 <workingSet IMemento.internal.id="framework2"/>
@@ -36,9 +42,9 @@
 <workingSet IMemento.internal.id="jdbcFramework"/>
 <workingSet IMemento.internal.id="showroom"/>
 </workingSet>
+<mruList name="ServerFile"/>
 <mruList name="springJdbc"/>
+<mruList name="Server1"/>
+<mruList name="Server"/>
 <mruList name="showroom"/>
-<mruList name="jdbcFramework"/>
-<mruList name="museumFramework"/>
-<mruList name="framework2"/>
 </workingSetManager>
