@@ -13,7 +13,7 @@ public class MovieDetails {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
+			e.printStackTrace(); 
 		}
 		Statement statement = null;
 

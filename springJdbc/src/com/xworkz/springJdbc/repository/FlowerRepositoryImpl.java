@@ -15,7 +15,7 @@ public class FlowerRepositoryImpl implements FlowerRepository {
 	@Override
 	public int insertFlower(Flower dto) {
 		System.out.println("Running insertFlower method");
-		String query = "insert into flower values('"+dto.getFlowerName()+"','"+dto.getColor()+"')";
+		String query = "insert into flower values('" + dto.getFlowerName() + "','" + dto.getColor() + "')";
 		return this.jdbcTemplate.update(query);
 	}
 
