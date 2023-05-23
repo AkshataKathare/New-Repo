@@ -35,10 +35,12 @@ public class PMInfo extends HttpServlet {
 
 		resp.setContentType("text/html");
 
+		String pm = req.getParameter("pmName");
+
 		PrintWriter writer = resp.getWriter();
 		writer.print("<html><body><a href='index.html'>Go to link</a></body></html>");
 		writer.print("<br>");
-		writer.print("PM name :" + req.getParameter("pmName"));
+		writer.print("PM name :" + pm);
 
 	}
 

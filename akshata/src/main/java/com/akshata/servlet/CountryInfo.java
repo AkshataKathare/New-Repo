@@ -47,7 +47,7 @@ public class CountryInfo extends HttpServlet {
 		PrintWriter writer = resp.getWriter();
 		writer.print("<html>");
 		writer.print("<body>");
-		writer.print("<h1>");
+		writer.print("<h1 style='color:blue'>");
 		writer.print("Country Info");
 		writer.print("</h1>");
 		writer.print(country);
@@ -60,10 +60,12 @@ public class CountryInfo extends HttpServlet {
 		writer.print("<br>");
 		System.out.println("Enter Prime Minister Name");
 		writer.print("<br>");
+		writer.print("<form method='get' action='pmInfo'>");
 		writer.print("PM Name:");
 		writer.print("<input type='text' name='pmName'>");
+		writer.print("<input type='submit' value='PMInfo'/>");
+		writer.print("</form>");
 		writer.print("<br>");
-		writer.print("<form method='get' action='pmInfo'><input type='submit' value='PMInfo'/></form>");
 		writer.print("</body>");
 		writer.print("</html>");
 
