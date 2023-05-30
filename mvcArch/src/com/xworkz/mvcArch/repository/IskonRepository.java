@@ -6,13 +6,9 @@ public interface IskonRepository {
 
 	boolean save(IskonDTO dto);
 
-	IskonDTO findByLocation(String location);
-
-	boolean insertIskon(IskonDTO dto);
+	boolean findByLocation(String location);
 
 	boolean updateByLocation(String location);
 
-	boolean readIskon(IskonDTO dto);
-
-	boolean deleteIskon(IskonDTO dto);
+	boolean deleteIskon(String location);
 }

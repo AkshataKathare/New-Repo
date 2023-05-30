@@ -10,7 +10,7 @@ public class CountChar {
 		Scanner sc = new Scanner(System.in);
 		String name = sc.nextLine();
 
-		char ch[] = name.toCharArray();
+		char[] ch = name.toCharArray();
 		int countChar = 0;
 		int countSpace = 0;
 

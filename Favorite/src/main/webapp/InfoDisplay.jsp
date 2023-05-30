@@ -21,6 +21,12 @@
 	Laptop at index 1 :${laptop2} 
 	
 	Laptop at index 2 :${laptop3}
+	
+	Fav sibling :${favoPerson}
+	
+	Bank :${Bank}
+	
+	<a href="Session.jsp">Test Session</a>
 	</pre>
 </body>
 </html>

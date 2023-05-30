@@ -1,25 +1,26 @@
 package com.file.xworkz.technical;
 
+import java.util.Scanner;
+
 public class PrimeNumber {
 
 	public static void main(String[] args) {
 
-		int num = 20;
-		boolean cond = false;
-		for (int i = 2; i <= num; i++) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		int count = 0;
+
+		for (int i = 2; i <= num / 2; i++) {
 			if (num % i == 0) {
-                 System.out.println("It is a prime number");
-                 cond=true;
-                 break;
-                 
-			}
-			if(!cond) {
-				System.out.println("It is prime");
-			}else {
-				System.out.println("It is not prime");
+				count++;
+				break;
 			}
 		}
-
+		if (count == 0) {
+			System.out.println("It is a prime number "+num);
+		} else {
+			System.err.println("It is not a prime number "+num);
+		}
 	}
 
 }
