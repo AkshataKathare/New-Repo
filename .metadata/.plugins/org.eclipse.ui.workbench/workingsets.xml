@@ -35,6 +35,7 @@
 <item elementID="=saveInList" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Hunger" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Favorite" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=pgDetails" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Servers" type="4"/>
 <item elementID="=family" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=summer" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
