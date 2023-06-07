@@ -1,18 +1,19 @@
-package com.xworkz.pgDetails.configuration;
+package com.xworkz.job.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan("com.xworkz.pgDetails")
+@ComponentScan("com.xworkz.job")
 @EnableWebMvc
-public class PGConfiguration implements WebMvcConfigurer {
+public class JobConfiguration implements WebMvcConfigurer {
 
-	public PGConfiguration() {
-		System.out.println("Creating PGConfiguration using no-arg const");
+	public JobConfiguration() {
+		System.out.println("Created JobConfiguration using no-arg const");
 	}
 
 	@Override
@@ -20,4 +21,8 @@ public class PGConfiguration implements WebMvcConfigurer {
 		configurer.enable();
 	}
 
+	@Override
+	public void addViewControllers(ViewControllerRegistry registry) {
+		registry.addViewController("/").setViewName("Job.jsp");
+	}
 }

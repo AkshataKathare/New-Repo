@@ -6,42 +6,34 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>PG Details</title>
+<title>Job Apllication</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
-
 </head>
 <body>
-<nav class="navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="index.jsp">Go to home</a> <a
-				class="navbar-brand" href="view">Go to view</a>
+			<img height="40px"
+				src="https://tse3.mm.bing.net/th?id=OIP.0OicRYTfLK0deVDnGHpc3wHaDE&pid=Api&P=0&h=180">
+			<a href="Job.jsp" style="color: black; font-size: xx-large;">Home</a>
 		</div>
 	</nav>
-	<h1>Displaying PG Details</h1>
+	<h1>Submitted Response</h1>
 
+	<span style="color: green;">${msg}</span>
+	<br>
 	<pre>
+	Applicant name :${dtos.applName}
 	
-	<span style="color: red">${message}</span>
-	<c:forEach items="${msg}" var="error">
-	<c:out value="${error}"></c:out>
-	</c:forEach>
+	Experience : ${dtos.experience}
 	
-	PG Name :${data.pgName}
+	Qualification :${dtos.qualification}
 	
-	PG Owner :${data.pgOwner}
+	Percentage : ${dtos.percentage}
 	
-	Location :${data.location}
-	
-	Rent :${data.pgRent}
-	
-	No of Floors :${data.noOfFloors}
-
 	</pre>
-
-
 </body>
 </html>

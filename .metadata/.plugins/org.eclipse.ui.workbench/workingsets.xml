@@ -42,6 +42,8 @@
 <item elementID="=lucky" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=fan" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=museum" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=donation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=job-application" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674796516668_2" label="Window Working Set" name="Aggregate for window 1674796516668"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098142874_7" label="Multiple Working Sets" name="Aggregate:framework2:jdbcFramework:">

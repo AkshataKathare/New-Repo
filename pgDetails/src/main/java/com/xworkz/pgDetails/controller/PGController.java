@@ -24,33 +24,20 @@ public class PGController {
 		System.out.println("Creating PGController using no-arg const");
 	}
 
-	private String pgName;
-	private String pgOwner;
-	private String location;
-	private Double pgRent;
-	private Integer noOfFloors;
-
 	@PostMapping("/save")
 	public String onSave(@Valid PGDTO dto, BindingResult bindingResult, Model model) {
 		System.out.println("Running onSave method in controller");
-		model.addAttribute("pgName", dto.getPgName());
-		model.addAttribute("pgOwner", dto.getPgOwner());
-		model.addAttribute("location", dto.getLocation());
-		model.addAttribute("pgRent", dto.getPgRent());
-		model.addAttribute("floors", dto.getNoOfFloors());
+		model.addAttribute("data", dto);
 
 		if (bindingResult.hasErrors()) {
-			bindingResult.getAllErrors()
-					.forEach(e -> System.err.println(e.getObjectName() + " " + e.getDefaultMessage()));
+			bindingResult.getAllErrors().forEach(e -> System.err.println(e.getDefaultMessage()));
 
-			model.addAttribute("message", "pgDTO is not valid");
-			model.addAttribute("msg", bindingResult.getAllErrors());
+			model.addAttribute("errors", bindingResult.getAllErrors());
 		} else {
-			this.list.add(dto);
-			System.out.println("Added details into list");
+			System.out.println("PGDTO is valid " + dto);
+			model.addAttribute("successMsg", "PGDTO is valid");
 		}
-		model.addAttribute("errors", bindingResult.getAllErrors());
-		return "/Display.jsp";
+		return "/index.jsp";
 	}
 
 	@GetMapping("view")

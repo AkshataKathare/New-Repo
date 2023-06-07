@@ -14,6 +14,12 @@
 <body>
 
 
+<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.jsp">Go to home</a> <a
+				class="navbar-brand" href="view">Go to view</a>
+		</div>
+	</nav>
 
 	<h1 style="margin-left: 50px">My Family</h1>
 
@@ -37,15 +43,11 @@
 		
 		Brother Occupation :<input type="text" name="brotherPursuing" />
 		
-		Surname :<input type="text" name="surname" />
+		Sur name :<input type="text" name="surname" />
 		
 		<input type="submit" name="Submit" />
 		</pre>
 	</form>
 </body>
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-	crossorigin="anonymous">
+
 </html>
