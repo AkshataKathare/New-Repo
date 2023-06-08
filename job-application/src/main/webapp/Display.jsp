@@ -14,18 +14,21 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	<nav class="navbar navbar-light" style="background-color: olive;">
 		<div class="container-fluid">
 			<img height="40px"
 				src="https://tse3.mm.bing.net/th?id=OIP.0OicRYTfLK0deVDnGHpc3wHaDE&pid=Api&P=0&h=180">
-			<a href="Job.jsp" style="color: black; font-size: xx-large;">Home</a>
+			<a href="Job.jsp" style="color: black; font-size: xlarge;">Home</a>
 		</div>
 	</nav>
-	<h1>Submitted Response</h1>
+	<h1 style="text-align: center;">Submit Response</h1>
 
-	<span style="color: green;">${msg}</span>
 	<br>
-	<pre>
+	<div style="font-style: italic; text-indent: 65px;">
+		<span style="color: green;">${msg}</span>
+	</div>
+	<br>
+	<pre style="border: solid thin; margin-left: 90px; margin-right: 90px">
 	Applicant name :${dtos.applName}
 	
 	Experience : ${dtos.experience}

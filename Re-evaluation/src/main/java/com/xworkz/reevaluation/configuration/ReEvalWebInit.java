@@ -1,13 +1,14 @@
-package com.xworkz.job.configuration;
+package com.xworkz.reevaluation.configuration;
 
 import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+
 import javax.servlet.ServletRegistration.Dynamic;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class JobWebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
+import com.xworkz.reevaluation.constants.ApplicationConstant;
+
+public class ReEvalWebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
@@ -18,7 +19,7 @@ public class JobWebInit extends AbstractAnnotationConfigDispatcherServletInitial
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
 		System.out.println("Running getServletConfigClasses");
-		return new Class[] { JobConfiguration.class };
+		return new Class[] { ReEvaluationConfig.class };
 	}
 
 	@Override
@@ -29,11 +30,10 @@ public class JobWebInit extends AbstractAnnotationConfigDispatcherServletInitial
 
 	@Override
 	protected void customizeRegistration(Dynamic registration) {
-		int maxSize = 800000000;
+		int maxSize = ApplicationConstant.MAX_FILE_SIZE;
 		MultipartConfigElement multipartConfigElement = new MultipartConfigElement(
-				"C:\\Users\\AKSHATA KATHARE\\tomcat-files\\temp", maxSize, maxSize * 2, maxSize / 2);
+				ApplicationConstant.TEMP_FILE_LOCATION, maxSize, maxSize * 2, maxSize / 2);
 
 		registration.setMultipartConfig(multipartConfigElement);
 	}
-
 }

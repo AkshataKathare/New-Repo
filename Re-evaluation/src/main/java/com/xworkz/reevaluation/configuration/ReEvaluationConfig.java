@@ -1,4 +1,4 @@
-package com.xworkz.job.configuration;
+package com.xworkz.reevaluation.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,12 +11,12 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-@ComponentScan("com.xworkz.job")
+@ComponentScan("com.xworkz.reevaluation")
 @EnableWebMvc
-public class JobConfiguration implements WebMvcConfigurer {
+public class ReEvaluationConfig implements WebMvcConfigurer {
 
-	public JobConfiguration() {
-		System.out.println("Created JobConfiguration using no-arg const");
+	public ReEvaluationConfig() {
+		System.out.println("Created " + this.getClass().getSimpleName());
 	}
 
 	@Bean
@@ -31,6 +31,6 @@ public class JobConfiguration implements WebMvcConfigurer {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("start");
+		registry.addViewController("/").setViewName("onStartUp");
 	}
 }
