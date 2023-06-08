@@ -24,11 +24,13 @@ body {
 		<div class="container-fluid">
 			<img height="40px"
 				src="https://tse3.mm.bing.net/th?id=OIP.0OicRYTfLK0deVDnGHpc3wHaDE&pid=Api&P=0&h=180">
-
+			<a href="Image.jsp" style="color: maroon;">Download the file from
+				here</a>
 		</div>
 	</nav>
 
-	<h1 style="text-align: center; color:navy;font-style: oblique;">Application for job</h1>
+	<h1 style="text-align: center; color: navy; font-style: oblique;">Application
+		for job</h1>
 
 	<c:forEach items="${errors}" var="error">
 		<span style="color: red">${error.defaultMessage}</span>

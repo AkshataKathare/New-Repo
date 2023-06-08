@@ -59,8 +59,8 @@
 <workingSet IMemento.internal.id="jdbcFramework"/>
 <workingSet IMemento.internal.id="showroom"/>
 </workingSet>
-<mruList name="ServerFile"/>
 <mruList name="jdbcFramework"/>
+<mruList name="ServerFile"/>
 <mruList name="springJdbc"/>
 <mruList name="Server1"/>
 <mruList name="Server"/>

@@ -1,15 +1,18 @@
 package com.xworkz.job.controller;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
@@ -48,4 +51,24 @@ public class JobController {
 		}
 		return "/Display.jsp";
 	}
+
+	@GetMapping("/download")
+	public void onDownload(String fileName, String contentType, HttpServletResponse response) throws IOException {
+		System.out.println("Running onDownload method in JobController");
+
+		File file = new File("C:\\Users\\AKSHATA KATHARE\\tomcat-files\\" + fileName);
+		response.setContentType(contentType);
+
+		OutputStream outputStream = response.getOutputStream();
+		FileInputStream inputStream = new FileInputStream(file);
+
+		byte[] buffer = new byte[4096];
+		int length;
+		while ((length = inputStream.read(buffer)) > 0) {
+			outputStream.write(buffer, 0, length);
+		}
+		inputStream.close();
+		outputStream.flush();
+	}
+
 }
