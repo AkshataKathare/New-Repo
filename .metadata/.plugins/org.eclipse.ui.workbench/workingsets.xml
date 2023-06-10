@@ -14,6 +14,8 @@
 <item elementID="=jdbcIntegration" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=mvcArch" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=jdbc" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=temperature" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=squirrel" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098533039_8" label="museumFramework" name="museumFramework">
 <item elementID="=museum" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -59,8 +61,8 @@
 <workingSet IMemento.internal.id="jdbcFramework"/>
 <workingSet IMemento.internal.id="showroom"/>
 </workingSet>
-<mruList name="jdbcFramework"/>
 <mruList name="ServerFile"/>
+<mruList name="jdbcFramework"/>
 <mruList name="springJdbc"/>
 <mruList name="Server1"/>
 <mruList name="Server"/>

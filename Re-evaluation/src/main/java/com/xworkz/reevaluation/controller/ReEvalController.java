@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
@@ -23,6 +26,8 @@ import com.xworkz.reevaluation.dto.ReEvaluationDTO;
 @Component
 @RequestMapping("/")
 public class ReEvalController {
+
+	private Set<ReEvaluationDTO> dtos = new TreeSet<>();
 
 	public ReEvalController() {
 		System.out.println("Created " + this.getClass().getSimpleName());
@@ -43,11 +48,18 @@ public class ReEvalController {
 			System.out.println("File Size " + file.getSize());
 			System.out.println("File Type" + file.getContentType());
 			System.out.println("File bytes" + file.getBytes());
-			File physicalFile = new File(ApplicationConstant.FILE_LOCATION + file.getOriginalFilename());
+			dto.setFileName(System.currentTimeMillis() + "_" + file.getOriginalFilename());
+			dto.setContentType(file.getContentType());
+			dto.setFileSize(file.getSize());
+			File physicalFile = new File(ApplicationConstant.FILE_LOCATION + dto.getFileName());
+
+			model.addAttribute("fileLink", file.getOriginalFilename());
 
 			try (OutputStream os = new FileOutputStream(physicalFile)) {
 				os.write(file.getBytes());
 			}
+			this.dtos.add(dto);
+			System.out.println("Dto added to set , with total" + this.dtos.size());
 			model.addAttribute("msg",
 					"Application of " + dto.getStudentName() + " for re-evaluation is submitted successfully");
 		}
@@ -72,6 +84,13 @@ public class ReEvalController {
 		}
 		in.close();
 		outputStream.flush();
+	}
+
+	@GetMapping("/list")
+	public String showData(Model model, MultipartFile file) {
+		System.out.println("running showData");
+		model.addAttribute("dtos", this.dtos);
+		return "/Display.jsp";
 	}
 
 }

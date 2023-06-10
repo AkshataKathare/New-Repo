@@ -40,6 +40,12 @@ public class JobDTO implements Serializable, Comparable<JobDTO> {
 	@Min(value = 60, message = "Min percentage of applicant must be 60%")
 	private double percentage;
 
+	private String fileName;
+
+	private String contentType;
+
+	private long fileSize;
+
 	@Override
 	public int compareTo(JobDTO o) {
 		return this.getApplName().compareTo(o.getApplName());

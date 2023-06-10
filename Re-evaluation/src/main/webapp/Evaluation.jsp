@@ -28,6 +28,7 @@ form {
 		</div>
 		
 		<div><a href="ImageDisplay.jsp">View Image</a></div>
+		<div><a href="list">List All</a></div>
 	</nav>
 
 

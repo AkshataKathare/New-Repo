@@ -33,9 +33,15 @@ public class ReEvaluationDTO implements Serializable, Comparable<ReEvaluationDTO
 	@Max(value = 34, message = "only for those subject which you have got below or equal to 34")
 	private double marks;
 
+	private String fileName;
+
+	private String contentType;
+
+	private long fileSize;
+
 	@Override
 	public int compareTo(ReEvaluationDTO o) {
-		return this.getCollegeName().compareTo(o.getCollegeName());
+		return this.getStudentName().compareTo(o.getStudentName());
 	}
 
 }

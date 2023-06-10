@@ -25,15 +25,15 @@ public class JPAUtil {
 		factory = Persistence.createEntityManagerFactory("com.xworkz");
 	}
 
-	public boolean valid(HolidayEntity entity) {
+	public static boolean valid(HolidayEntity entity) {
 		ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
 		Validator validator = factory.getValidator();
 		Set<ConstraintViolation<HolidayEntity>> cv = validator.validate(entity);
-		if (!cv.isEmpty()) {
+		if (!cv.isEmpty()&&cv!=null) {
 			System.out.println("Entity contains violations and hence will not be saved");
 			System.out.println("Number of violations " + cv.size());
 			cv.forEach(c -> System.err.println(c.getPropertyPath() + " " + c.getMessage()));
-			return false;
+			return true;
 
 		}
 		return cv.isEmpty();
