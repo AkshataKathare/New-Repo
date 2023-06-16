@@ -15,7 +15,6 @@ import squirrelcom.xworkz.util.Util;
 public class SquirrelRepoImpl implements SquirrelRepository {
 
 	private EntityManagerFactory factory = Util.getFactory();
-	private SquirrelEntity entity;
 
 	@Override
 	public boolean save(SquirrelEntity entity) {
@@ -158,20 +157,20 @@ public class SquirrelRepoImpl implements SquirrelRepository {
 	@Override
 	public boolean deleteByColor(String color) {
 		System.out.println("Running deleteByColor method in SquirrelRepo");
-		EntityManager manager=factory.createEntityManager();
-		
-		EntityTransaction transaction=manager.getTransaction();
+		EntityManager manager = factory.createEntityManager();
+
+		EntityTransaction transaction = manager.getTransaction();
 		transaction.begin();
-		Query query=manager.createNamedQuery("findByColor");
+		Query query = manager.createNamedQuery("findByColor");
 		query.setParameter("byColor", color);
-		
-		List<SquirrelEntity> entities =new ArrayList<>();
-		entities=query.getResultList();
-		for (SquirrelEntity entity:entities) {
+
+		List<SquirrelEntity> entities = new ArrayList<>();
+		entities = query.getResultList();
+		for (SquirrelEntity entity : entities) {
 			manager.remove(entity);
 		}
 		transaction.commit();
-		
+
 		manager.close();
 
 		return true;

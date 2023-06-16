@@ -22,10 +22,10 @@
 				href="DriveLicense.jsp">Home Page</a>
 		</div>
 	</nav>
-	<h1>Data in Table format</h1>
+	<h1 style="text-align: center;">Data in Table format</h1>
 
 	Total data saved :${dtos.size()}
-	<table class="table">
+	<table class="table table-secondary table-striped">
 		<tr>
 			<th>Name</th>
 			<th>Age</th>

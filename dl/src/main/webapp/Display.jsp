@@ -23,7 +23,7 @@
 				Format</a>
 		</div>
 	</nav>
-	<h1>View your details</h1>
+	<h1 style="text-align: center;">View your details</h1>
 
 	<span style="color: green;">${successMsg}</span>
 

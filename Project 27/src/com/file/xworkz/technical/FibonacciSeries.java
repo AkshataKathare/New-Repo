@@ -3,14 +3,17 @@ package com.file.xworkz.technical;
 public class FibonacciSeries {
 
 	public static void main(String[] args) {
-		int a = 0;
+		int num = 10;
 
-		for (int b = 0; b <= 10; b++) {
-			int c = a + b;
-			a = b;
-			b = c;
+		int first = 0;
+		int second = 1;
 
-			System.out.println(c);
+		for (int i = 1; i <= num; i++) {
+			System.out.println(first);
+
+			int next = first + second;
+			first = second;
+			second = next;
 		}
 
 	}

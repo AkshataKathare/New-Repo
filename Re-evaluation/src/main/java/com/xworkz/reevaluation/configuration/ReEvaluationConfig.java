@@ -10,13 +10,16 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Configuration
 @ComponentScan("com.xworkz.reevaluation")
 @EnableWebMvc
+@Slf4j
 public class ReEvaluationConfig implements WebMvcConfigurer {
 
 	public ReEvaluationConfig() {
-		System.out.println("Created " + this.getClass().getSimpleName());
+		log.info("Created " + this.getClass().getSimpleName());
 	}
 
 	@Bean

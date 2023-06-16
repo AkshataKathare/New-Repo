@@ -6,17 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.xworkz.reevaluation.dto.ReEvaluationDTO;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
 @RequestMapping("/")
+@Slf4j
 public class ReEvalDefaultController {
 
 	public ReEvalDefaultController() {
-		System.out.println("Created " + this.getClass().getSimpleName());
+		log.info("Created " + this.getClass().getSimpleName());
 	}
 
 	@RequestMapping("/onStartUp")
 	public String start(Model model) {
-		System.out.println("Running start method in DefaultController");
+		log.info("Running start method in DefaultController");
 		model.addAttribute("dto", new ReEvaluationDTO());
 		return "/Evaluation.jsp";
 	}

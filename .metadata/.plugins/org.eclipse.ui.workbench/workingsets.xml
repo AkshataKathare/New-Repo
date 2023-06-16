@@ -48,6 +48,7 @@
 <item elementID="=job-application" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Re-evaluation" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=dl" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=contactInfo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1674796516668_2" label="Window Working Set" name="Aggregate for window 1674796516668"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683098142874_7" label="Multiple Working Sets" name="Aggregate:framework2:jdbcFramework:">
@@ -61,6 +62,10 @@
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1683263059935_10" label="Multiple Working Sets" name="Aggregate:jdbcFramework:showroom:">
 <workingSet IMemento.internal.id="jdbcFramework"/>
 <workingSet IMemento.internal.id="showroom"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1686885874652_16" label="Multiple Working Sets" name="Aggregate:jdbcFramework:ServerFile:">
+<workingSet IMemento.internal.id="jdbcFramework"/>
+<workingSet IMemento.internal.id="ServerFile"/>
 </workingSet>
 <mruList name="ServerFile"/>
 <mruList name="jdbcFramework"/>

@@ -8,23 +8,26 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 
 import com.xworkz.reevaluation.constants.ApplicationConstant;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ReEvalWebInit extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		System.out.println("Running getRootConfigClasses");
+		log.info("Running getRootConfigClasses");
 		return null;
 	}
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		System.out.println("Running getServletConfigClasses");
+		log.info("Running getServletConfigClasses");
 		return new Class[] { ReEvaluationConfig.class };
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		System.out.println("Running getServletMappings");
+		log.info("Running getServletMappings");
 		return new String[] { "/" };
 	}
 

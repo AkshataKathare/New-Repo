@@ -24,8 +24,11 @@ import com.xworkz.reevaluation.constants.ApplicationConstant;
 import com.xworkz.reevaluation.dto.ReEvaluationDTO;
 import com.xworkz.reevaluation.service.ReEvaluationService;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Component
 @RequestMapping("/")
+@Slf4j
 public class ReEvalController {
 
 	private Set<ReEvaluationDTO> dtos = new TreeSet<>();
@@ -34,24 +37,24 @@ public class ReEvalController {
 	private ReEvaluationService service;
 
 	public ReEvalController() {
-		System.out.println("Created " + this.getClass().getSimpleName());
+		log.info("Created " + this.getClass().getSimpleName());
 	}
 
 	@PostMapping("/subm")
 	public String onSubmit(@Valid ReEvaluationDTO dto, BindingResult bindingResult, Model model, MultipartFile file)
 			throws IOException {
-		System.out.println("Running onSave method ");
+		log.info("Running onSave method ");
 
 		model.addAttribute("dtos", dto);
 		if (bindingResult.hasErrors()) {
-			//model.addAttribute("errors", bindingResult.getAllErrors());
+			// model.addAttribute("errors", bindingResult.getAllErrors());
 			model.addAttribute("dto", dto);
 			return "/Evaluation.jsp";
 		} else {
-			System.out.println("File received:" + file.getName());
-			System.out.println("File Size " + file.getSize());
-			System.out.println("File Type" + file.getContentType());
-			System.out.println("File bytes" + file.getBytes());
+			log.info("File received:" + file.getName());
+			log.info("File Size " + file.getSize());
+			log.info("File Type" + file.getContentType());
+			log.info("File bytes" + file.getBytes());
 			dto.setFileName(System.currentTimeMillis() + "_" + file.getOriginalFilename());
 			dto.setContentType(file.getContentType());
 			dto.setFileSize(file.getSize());
@@ -61,7 +64,7 @@ public class ReEvalController {
 				os.write(file.getBytes());
 			}
 			this.dtos.add(dto);
-			System.out.println("Dto added to set , with total" + this.dtos.size());
+			log.info("Dto added to set , with total" + this.dtos.size());
 			this.service.valideAndThenSave(dto);
 			model.addAttribute("msg",
 					"Application of " + dto.getStudentName() + " for re-evaluation is submitted successfully");
@@ -72,7 +75,7 @@ public class ReEvalController {
 
 	@GetMapping("/fileDownload")
 	public void sendImage(String fileName, String contentType, HttpServletResponse response) throws IOException {
-		System.out.println("running sendImage....");
+		log.info("running sendImage....");
 		// STEP 1: GEt ref of the File , by name passed
 		File file = new File(ApplicationConstant.FILE_LOCATION + fileName);
 		// STEP 2 : Set content Type
@@ -91,7 +94,7 @@ public class ReEvalController {
 
 	@GetMapping("/list")
 	public String showData(Model model, MultipartFile file) {
-		System.out.println("running showData");
+		log.info("running showData");
 		model.addAttribute("dtos", this.dtos);
 		return "/Display.jsp";
 	}
