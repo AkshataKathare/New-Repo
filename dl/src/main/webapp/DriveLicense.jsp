@@ -33,6 +33,10 @@
 			document.getElementById("name2").innerHTML = "* Name should have at least 3 letters";
 			return false;
 		}
+		if (name.length >= 3) {
+			document.getElementById("name2").innerHTML = "";
+			return validName;
+		}
 		return validName;
 	}
 	function validateAge() {
@@ -43,6 +47,10 @@
 			// 			alert("Age must be greater than 18");
 			document.getElementById("age2").innerHTML = "* Age must be greater than 18";
 			return false;
+		}
+		if (age >= 18) {
+			document.getElementById("age2").innerHTML = "";
+			return validAge;
 		}
 		return validAge;
 	}
@@ -61,6 +69,10 @@
 			document.getElementById("city2").innerHTML = "* City must have at least 3 letters";
 			return false;
 		}
+		if (city.length >= 3) {
+			document.getElementById("city2").innerHTML = "";
+			return validcity;
+		}
 		return validCity;
 	}
 
@@ -77,6 +89,10 @@
 			// 			alert("State name must be at least 3 char");
 			document.getElementById("state2").innerHTML = "* State must have at least 3 letters";
 			return false;
+		}
+		if (state.length >= 3) {
+			document.getElementById("state2").innerHTML = "";
+			return validState;
 		}
 		return validState;
 	}
@@ -97,6 +113,10 @@
 
 			return false;
 		}
+		if (country.length >= 3) {
+			document.getElementById("country2").innerHTML = "";
+			return validCountry;
+		}
 
 		return validCountry;
 	}
@@ -110,7 +130,8 @@
 				src="https://tse1.mm.bing.net/th?id=OIP.29m-3-T3tLDplFTJWbl8NgAAAA&pid=Api&P=0&h=180">
 			<a style="color: yellow; margin-left: 40px;" href="DownloadFile.jsp">File
 				download</a> <a style="color: yellow; margin-left: 40px;"
-				href="showInList">Table Format</a>
+				href="showInList">Table Format</a> <a
+				style="color: yellow; margin-left: 40px;" href="Search.jsp">Search</a>
 		</div>
 	</nav>
 
@@ -124,8 +145,8 @@
 
 	<form action="save" method="post" enctype="multipart/form-data"
 		onsubmit="return validationForm()"
-		style="border: solid 2px; margin-left: 150px; margin-right: 150px;">
-		<pre style="margin-left: 50px">
+		style="border: solid 2px; margin-left: 100px; margin-right: 100px;">
+		<pre>
 	        Name :<span style="color: red">*</span><input type="text"
 				name="fullName" value="${dto.fullName}" id="name"
 				onchange="return validateName()" /><span id="name2"

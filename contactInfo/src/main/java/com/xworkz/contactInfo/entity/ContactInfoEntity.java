@@ -22,7 +22,7 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(name = "contactinfo")
-@NamedQuery(name="findByName",query = "select info from ContactInfoEntity as info where info.name like :nm")
+@NamedQuery(name = "findByName", query = "select info from ContactInfoEntity as info where info.name like :nm")
 public class ContactInfoEntity implements Serializable, Comparable<ContactInfoEntity> {
 
 	@Id
@@ -31,6 +31,8 @@ public class ContactInfoEntity implements Serializable, Comparable<ContactInfoEn
 	private String name;
 	private String email;
 	private long mobile;
+	private String comments;
+	private String fileName;
 	private String originalFileName;
 	private String contentType;
 

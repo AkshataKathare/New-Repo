@@ -65,17 +65,26 @@ public class DrivingLicenseController {
 			} catch (FileNotFoundException exception) {
 				exception.printStackTrace();
 			}
+			dto.setOriginalName(file.getOriginalFilename());
 			this.dtos.add(dto);
 			this.dlService.validateAndSave(dto);
 			log.info("Added the data into list");
 			model.addAttribute("total", this.dtos.size());
 
-			dto.setOriginalName(file.getOriginalFilename());
+		
 			model.addAttribute("successMsg",
 					"Driving License application of " + dto.getFullName() + " is submitted successfully");
 		}
 
 		return "/Display.jsp";
+	}
+
+	@GetMapping("/search")
+	public String onSearch(Model model, String fullName) {
+		log.info("Running onSearch method in Controller");
+		List<DrivingLicenseDTO> list = this.dlService.findByName(fullName);
+		model.addAttribute("list", list);
+		return "/Search.jsp";
 	}
 
 	@GetMapping("/downloadFile")

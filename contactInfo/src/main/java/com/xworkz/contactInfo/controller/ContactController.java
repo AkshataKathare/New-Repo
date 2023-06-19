@@ -18,6 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.xworkz.contactInfo.constants.ContactConstants;
 import com.xworkz.contactInfo.dto.ContactDTO;
 import com.xworkz.contactInfo.service.ContactService;
+import com.xworkz.contactInfo.util.Util;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,17 +33,14 @@ public class ContactController {
 	public ContactController() {
 		log.info("Created " + this.getClass().getSimpleName());
 	}
-	
-	
+
 	@GetMapping("/search")
-	public String onSearch(Model model,String name)
-	{
-		System.out.println("running onSearch with param"+name);
-		List<ContactDTO> list= contactService.findByName(name);
-		model.addAttribute("list",list);
+	public String onSearch(Model model, String name) {
+		System.out.println("running onSearch with param" + name);
+		List<ContactDTO> list = contactService.findByName(name);
+		model.addAttribute("list", list);
 		return "/Search.jsp";
 	}
-	
 
 	@PostMapping("/send")
 	public String onSend(ContactDTO dto, Model model, MultipartFile file) throws IOException {
@@ -59,7 +57,7 @@ public class ContactController {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		dto.sendEmail(dto.getEmail());
+		Util.sendEmail(dto.getEmail(), dto.getName());
 		this.contactService.validateAndThenSave(dto);
 		model.addAttribute("successMsg", "Hi " + dto.getName() + "," + "Contact info has been successfully saved");
 		return "/Display.jsp";

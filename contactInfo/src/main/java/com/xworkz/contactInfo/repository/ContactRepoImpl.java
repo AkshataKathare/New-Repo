@@ -40,7 +40,7 @@ public class ContactRepoImpl implements ContactRepository {
 
 		EntityManager entityManager = factory.createEntityManager();
 		Query query = entityManager.createNamedQuery("findByName");
-		query.setParameter("nm", "%"+name+"%");
+		query.setParameter("nm", "%" + name + "%");
 		List<ContactInfoEntity> result = query.getResultList();
 		log.info("result from repo" + result);
 		entityManager.close();
