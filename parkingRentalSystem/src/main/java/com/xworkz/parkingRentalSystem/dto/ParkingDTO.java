@@ -25,7 +25,7 @@ public class ParkingDTO implements Serializable, Comparable<ParkingDTO> {
 
 	@Override
 	public int compareTo(ParkingDTO o) {
-		return 0;
+		return this.getEmail().compareTo(o.getEmail());
 	}
 
 }

@@ -1,5 +1,8 @@
 package com.xworkz.parkingRentalSystem.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
@@ -24,13 +27,16 @@ public class ParkingController {
 	}
 
 	@PostMapping("login")
-	public String onLogin(ParkingDTO dto, Model model) {
+	public String onLogin(ParkingDTO dto, Model model, HttpServletRequest req) {
 		log.info("Running onLogin method in Parking Controller");
-		ParkingDTO dto1 = parkingService.validate(dto);
+		ParkingDTO dto1 = this.parkingService.validate(dto);
 		if (dto1 != null) {
-			// model.addAttribute("loginTime", Time.from(Instant.now()));
-			model.addAttribute("userName", dto1.getName());
-			model.addAttribute("loginTime", dto1.getLoginTime());
+
+			HttpSession session = req.getSession(true);
+			session.setAttribute("dto", dto1);
+//			// model.addAttribute("loginTime", Time.from(Instant.now()));
+//			model.addAttribute("userName", dto1.getName());
+//			model.addAttribute("loginTime", dto1.getLoginTime());
 
 			return "/LoginSuccess.jsp";
 		}

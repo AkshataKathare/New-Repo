@@ -3,6 +3,7 @@ package com.xworkz.parkingRentalSystem.repository;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.PersistenceException;
 import javax.persistence.Query;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +27,21 @@ public class ParkingRepoImpl implements ParkingRepo {
 	@Override
 	public AdminEntity findByMail(String mail) {
 		log.info("Running findAll method in RepoImpl");
-
-		EntityManager manager = factory.createEntityManager();
-		Query query = manager.createNamedQuery("findByMail");
-		query.setParameter("em", mail);
-		Object obj = query.getSingleResult();
-		AdminEntity entity = (AdminEntity) obj;
-		return entity;
+		if (!mail.isEmpty()) {
+			EntityManager manager = factory.createEntityManager();
+			Query query = manager.createNamedQuery("findByMail");
+			query.setParameter("em", mail);
+			try {
+				Object obj = query.getSingleResult();
+				AdminEntity entity = (AdminEntity) obj;
+				return entity;
+			} catch (PersistenceException e) {
+				e.printStackTrace();
+			} finally {
+				manager.close();
+			}
+		}
+		return null;
 	}
 
 //	@Override

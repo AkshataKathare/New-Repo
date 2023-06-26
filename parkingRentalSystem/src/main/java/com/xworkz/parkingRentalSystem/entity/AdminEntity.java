@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
+import com.xworkz.parkingRentalSystem.util.AdminLoginUtil;
+
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Entity
 @Table(name = "adminlogininfo")
 @NamedQuery(name = "findByMail", query = "select inf from AdminEntity as inf where inf.email=:em")
-public class AdminEntity implements Serializable, Comparable<AdminEntity> {
+public class AdminEntity extends AdminLoginUtil implements Serializable, Comparable<AdminEntity> {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

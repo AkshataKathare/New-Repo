@@ -45,8 +45,8 @@
 		<img style="margin-left: 20px" height="50px"
 			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
 		<div>
-			<a style="font-size: x-large; margin-right: 30px"
-				class="btn btn-warning" href="ParkingHome.jsp" role="button">Home</a>
+			<a style="margin-right: 30px" class="btn btn-warning"
+				href="ParkingHome.jsp" role="button">Go Back</a>
 		</div>
 
 	</nav>
@@ -58,15 +58,12 @@
 
 		<pre>
 		
- Email-ID <span style="color: red">*</span> :<input class="form-control"
-				type="text" name="email" id="email" required="required"
-				onchange="return validEmail()" /><span style="color: red"
-				id="email2"></span>
-	    
- Password <span style="color: red">*</span> :<input class="form-control"
-				type="password" name="password" id="password"
-				onchange="return validPassword()" /><span style="color: red"
-				id="password2"></span>
+ <input class="form-control" type="text" name="email" id="email"
+				onchange="return validEmail()" placeholder="Email ID" /><span
+				style="color: red" id="email2"></span>  
+ <input class="form-control" type="password" name="password"
+				id="password" onchange="return validPassword()"
+				placeholder="Password" /><span style="color: red" id="password2"></span>
 	    <span style="color: red">${incorrectEmailOrPassword}</span>
 	    <input class="btn-success" style="margin-left: 150px" type="submit"
 				value="Login" />

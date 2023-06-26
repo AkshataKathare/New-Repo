@@ -17,7 +17,7 @@
 	<nav class="navbar navbar-light" style="background-color: teal;">
 		<img style="margin-left: 20px" height="50px"
 			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
-		</div>
+
 		<a class="btn btn-warning" href="AdminLogin.jsp" role="button">Admin
 			Login</a>
 		<div>
