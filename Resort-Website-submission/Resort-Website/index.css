@@ -1,0 +1,659 @@
+.main-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.navbar-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    display: flex;
+    width: 50%;
+    list-style-type: none;
+    align-content: center;
+    justify-content: space-around;
+    z-index: 2;
+    color: white;
+}
+
+.navigation {
+    font-size: larger;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+.buy-now-button {
+    background-color: transparent;
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    border: solid #ffffff;
+}
+
+.buy-now-button:hover {
+    color: black;
+    background-color: white;
+}
+
+.drop-down {
+    content: url('images/filled-drop-down.svg');
+    height: 15px;
+}
+
+.navigation:hover {
+    cursor: pointer;
+    color: #709faf;
+}
+
+.theme-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    background-size: cover;
+    background-image: url('images/Luxury-ski-img.jpg');
+    background-color: rgba(0, 0, 0, 0.467);
+    background-blend-mode: overlay;
+    height: 1000px;
+    padding-top: 0;
+}
+
+.heading-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.resort-website-heading {
+    letter-spacing: 1px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Gilda Display', serif;
+    font-size: 80px;
+    font-weight: 10;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.download-button {
+    padding: 1rem 2.2rem;
+    letter-spacing: 1px;
+    background-color: #709faf;
+    border-color: transparent;
+    color: white;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.download-button:hover {
+    background-color: #498ba1;
+}
+
+.theme-arrow-down {
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-down-section {
+    content: url('images/down-arrow.svg');
+    color: white;
+    background-color: #709faf !important;
+    border-color: #709faf !important;
+    height: 70px;
+    border-radius: 50%;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.luxury-ski-description {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.luxury-heading {
+    font-family: 'Gilda Display', serif;
+    padding-top: 20px;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    max-width: 1050px;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: lighter;
+}
+
+.descriptions-luxury {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    color: rgb(59, 57, 57);
+    justify-content: center;
+    padding-bottom: 45px;
+}
+
+.luxury-left-paragraph {
+    width: 25%;
+    padding-right: 25px;
+}
+
+.luxury-right-paragraph {
+    width: 25%;
+    padding-left: 25px;
+}
+
+.check-availabilty {
+    font-family: 'Gilda Display', serif;
+    font-size: 4rem;
+    line-height: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 10;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.availabilty-section {
+    background-image: url('images/road-img2.jfif');
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-color: rgba(9, 8, 8, 0.31);
+    background-blend-mode: overlay;
+    height: fit-content;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.bottom-of-availabilty {
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-info {
+    width: 20%;
+    border: #709faf;
+    background-color: #709faf;
+    height: 200px;
+    color: white;
+    font-family: 'Gilda Display', serif;
+    letter-spacing: 2px;
+    font-weight: 5;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
+}
+
+.check-in-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-out-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checks {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    color: #709faf;
+    height: 150px;
+    padding-top: 30px;
+}
+
+.white-background {
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+.check-in {
+    width: 30%;
+}
+
+.check-out {
+    width: 30%;
+}
+
+.guests-avail {
+    width: 30%;
+}
+
+.head {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+.date-month {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.month {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.guest-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.blue-background {
+    background-color: #709faf;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+.blue-background:hover {
+    background-color: #498ba1;
+}
+
+.activity-container {
+    height: fit-content;
+    background-color: #efefef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.activity-sub {
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    display: flex;
+}
+
+.descriptions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+}
+
+.hiking-image {
+    content: url('images/hiking-climbing.jpg');
+    width: 50%;
+    height: 500px;
+}
+
+.skiing-image {
+    content: url('images/skiing-boarding.jpg');
+    width: 50%;
+    height: 500px;
+}
+
+.description-head {
+    font-family: 'Gilda Display', serif;
+    width: 50%;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.description-text {
+    width: 80%;
+    color: gray;
+    letter-spacing: 1px;
+    padding-left: 20px;
+}
+
+.read-more-button {
+    border: solid #709faf;
+    color: #709faf;
+    background-color: transparent;
+    padding: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.read-more-button:hover {
+    background-color: #709faf;
+    color: white;
+}
+
+.our-rooms {
+    background-size: cover;
+    background-image: url('images/room-bg-img.jpg');
+    background-color: rgba(35, 23, 23, 0.73);
+    background-blend-mode: overlay;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.room-head {
+    font-family: 'Gilda Display', serif;
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.all-rooms {
+    display: flex;
+    color: rgba(128, 128, 128, 0.721);
+    flex-wrap: wrap;
+    width: 67%;
+    justify-content: space-between;
+}
+
+.room-description-head {
+    color: black;
+    font-family: 'Gilda Display', serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    padding-left: 20px;
+}
+
+.room {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: white;
+    justify-content: space-between;
+    margin: 2rem;
+    padding-bottom: 30px;
+}
+
+.room-img {
+    width: 100%;
+    height: 250px;
+}
+
+.guest-house {
+    display: flex;
+    width: fit-content;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.guest-icon {
+    height: 40px;
+}
+
+.house-icon {
+    height: 40px;
+}
+
+.book {
+    padding-left: 20px;
+}
+
+.book-now-button {
+    background-color: transparent;
+    border: solid #709faf;
+    align-items: center;
+    color: #709faf;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.book-now-button:hover {
+    background-color: #709faf;
+    color: white;
+}
+
+.room-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.icon {
+    height: 30px;
+}
+
+.read-more-link {
+    color: #709faf;
+    cursor: pointer;
+}
+
+.read-more-link:hover {
+    color: #446571;
+}
+
+.right-arrow {
+    content: url('images/right-arrow.svg');
+    height: 30px;
+}
+
+.read-more-bottom {
+    display: flex;
+    align-items: center;
+}
+
+.replace-nav-bar {
+    display: none;
+}
+
+.hamburger-menu {
+    content: url('images/white-menu.png');
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-section {
+        display: none;
+    }
+
+    .replace-nav-bar {
+        display: block;
+    }
+
+    .room-description {
+        height: 650px;
+    }
+
+    .all-rooms {
+        flex-wrap: wrap;
+    }
+
+    .room {
+        width: 60%;
+    }
+
+    .check-availabilty {
+        line-height: 60px;
+    }
+}
+
+@media only screen and (min-width :769px) and (max-width:1345px) {
+    .all-rooms {
+        flex-wrap: wrap;
+    }
+
+    .room {
+        width: 40%;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .read-more-button {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    .all-rooms {
+        justify-content: center;
+        width: 90%;
+    }
+
+    .descriptions-luxury {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .luxury-left-paragraph {
+        width: 40%;
+    }
+
+    .luxury-right-paragraph {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 1262px) {
+    .reservation-info {
+        width: fit-content;
+        border: #709faf;
+        background-color: #709faf;
+        height: 200px;
+        color: white;
+        font-family: 'Gilda Display', serif;
+    }
+
+}
+
+@media only screen and (max-width: 390px) {
+    .theme-container {
+        height: 844px;
+    }
+
+    .luxury-left-paragraph {
+        width: 80%;
+        text-align: center;
+        padding-left: 35px;
+    }
+
+    .luxury-right-paragraph {
+        width: 80%;
+        text-align: center;
+    }
+
+    .descriptions-luxury {
+        width: 90%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .resort-website-heading {
+        font-size: 3rem;
+    }
+
+    .activity-container {
+        width: fit-content;
+        font-size: x-small;
+    }
+
+    .description-head {
+        font-size: large;
+    }
+
+    .descriptions-luxury {
+        width: 100%;
+    }
+
+    .bottom-of-availabilty {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reservation-info {
+        width: 80%;
+    }
+
+    .checks {
+        width: 50%;
+        flex-direction: column;
+        height: 500px !important;
+    }
+
+    .white-background {
+        display: flex;
+        flex-direction: column;
+        /* height: % !important; */
+        align-items: center;
+        height: 400px;
+    }
+
+    .blue-background {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .head {
+        width: 100%;
+        text-align: center;
+    }
+
+    .check-in {
+        width: 100%;
+        height: 25%;
+    }
+
+    .check-out {
+        width: 100%;
+        height: 25%;
+    }
+
+    .guests-avail {
+        width: 100%;
+        height: 25%;
+    }
+
+    .check-availabilty {
+        margin: 10px;
+        font-size: 2.5rem;
+        padding: 0;
+        width: 100% !important;
+    }
+
+    .availabilty-section {
+        align-items: center;
+        height: 844px;
+    }
+
+    .room {
+        width: 80%;
+    }
+
+    
+}
