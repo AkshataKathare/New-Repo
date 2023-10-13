@@ -10,6 +10,38 @@
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
+<script>
+	/* function validateTerm() {
+		var locate = document.getElementById("location").value;
+		var vType = document.getElementById("vehicleType").value;
+		var vClassification = document.getElementById("vehicleClassification").value;
+		var term = document.getElementById("term").value;
+
+		const req = new XMLHttpRequest();
+
+		req.open("POST", "http://localhost:8081/parkingRentalSystem/save"
+				+ locate + "/" + vType + "/" + vClassification + "/" + term);
+		req.send();
+
+		req.onload = function() {
+			document.getElementById("error").innerHTML = this.responseText();
+		}
+	} */
+
+	function validateLocation() {
+		var loc = document.getElementById("location").value;
+		console.log(loc);
+
+		if (loc == null) {
+			docoument.getElementById("location2").innerHTML = "* Please select the location";
+			return false;
+		}
+		if (loc != null) {
+			document.getElementById("location2").innerHTML = "";
+			return true;
+		}
+	}
+</script>
 </head>
 <body>
 
@@ -18,32 +50,33 @@
 			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
 		<div>
 
-			<a style="margin-right: 750px" class="btn btn-warning" href="LoginSuccess.jsp" role="submit">Home</a>
-
-
-
+			<a style="margin-left: 790px" class="btn btn-warning"
+				href="LoginSuccess.jsp" role="submit">Home</a>
 		</div>
 		<div style="color: orange; font-size: x-large; margin-right: 20px">
-			User : ${dto.name}</div>
+			User,${dto.name}</div>
 	</nav>
 
-	<h3 style="text-align: center;">Please enter the below information</h3>
+	<h3 style="text-align: center; color: purple;">PLEASE ENTER THE
+		BELOW INFORMATION</h3>
 
 	<form
-		style="border: solid black 1px; margin-left: 280px; background-color: silver; margin-right: 280px"
+		style="border: solid black 1px; margin-left: 280px; background-color: silver; margin-right: 280px; margin-bottom: 80px"
 		action="save" method="post">
 		<pre>
 		
-Location :<select class="form-select" name="location">
-		<option>Select</option>
+Location :<select id="location" onchange="return validateLocation()"
+				class="form-select" name="location">
+		<option value="">Select</option>
 		<option value="Rajajinagar">Rajajinagar</option>
 		<option value="BTM">BTM</option>
 		<option value="Vijaynagar">Vijaynagar</option>
 		<option value="Basavangudi">Basavangudi</option>
 		<option value="Kormangala">Kormangala</option>
-		</select>
+		</select><span id="location2" style="color: red"></span>
 		
-Vehicle-Type :<select class="form-select" name="vehicleType">
+Vehicle-Type :<select id="vehicleType" class="form-select"
+				name="vehicleType">
 		    <option>Select</option>
 			<option value="twoWheeler-electrical">Two-wheeler(Electrical)</option>
 			<option value="twoWheeler-fuel">Two-wheeler(Fuel)</option>
@@ -51,8 +84,8 @@ Vehicle-Type :<select class="form-select" name="vehicleType">
 			<option value="fourWheeler-fuel">Four-wheeler(Fuel)</option>
 		</select>
 		
-Vehicle Classification :<select class="form-select"
-				name="vehicleClassification">
+Vehicle Classification :<select id="vehicleClassification"
+				class="form-select" name="vehicleClassification">
 		<option>Select</option>
 		<option value="Bike">Bike</option>
 		<option value="Scooty">Scooty</option>
@@ -67,7 +100,7 @@ Vehicle Classification :<select class="form-select"
 		<option value="Hyundai">Hyundai</option>
 		</select>
 				
-Term :<select class="form-select" name="term">
+Term :<select id="term" class="form-select" name="term">
 	        <option>Select</option>
 			<option value="1day">1day</option>
 			<option value="1week">1week</option>
@@ -77,20 +110,25 @@ Term :<select class="form-select" name="term">
 			<option value="HalfYear">HalfYear</option>
 			<option value="1year">1year</option>
 			</select>
+			<!-- <span id="error" style="color: red"></span> -->
 	 		
-Price :<input class="form-control" type="number" name="price" />
+<input class="form-control" type="number" name="price"
+				placeholder="Price" />
 	  		
-Discount :<input class="form-control" type="text" name="discount" />
+<input class="form-control" type="number" name="discountInPercentage"
+				placeholder="Discount" />
 		
 		<input class="btn-success" type="submit" value="Save" />
 		</pre>
 	</form>
 
-	<footer>
+	<div class="footer fixed-bottom">
 		<nav class="navbar navbar-light" style="background-color: teal;">
-			<a style="margin-left: 400px; color: orange; font-size: x-large;">Last
-				login :${dto.loginTime}</a>
+			<h6 style="margin-left: 250px;">
+				© 2023 Copyright Parking website <span style="color: white;">${dto.email}</span>
+				Last login :${dto.loginTime}
+			</h6>
 		</nav>
-	</footer>
+	</div>
 </body>
 </html>

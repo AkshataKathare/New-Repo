@@ -22,6 +22,10 @@
 			document.getElementById("email2").innerHTML = "";
 			return true;
 		}
+		 if(!email.contains(@gmail.com)){
+			document.getElementById("email2").innerHTML="Email must end with @gmail.com";
+			return false;
+		} 
 		return true;
 	}
 	function validPassword() {
@@ -46,7 +50,7 @@
 			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
 		<div>
 			<a style="margin-right: 30px" class="btn btn-warning"
-				href="ParkingHome.jsp" role="button">Go Back</a>
+				href="ParkingHome.jsp" role="button">Home</a>
 		</div>
 
 	</nav>
@@ -59,7 +63,7 @@
 		<pre>
 		
  <input class="form-control" type="text" name="email" id="email"
-				onchange="return validEmail()" placeholder="Email ID" /><span
+				onchange="validEmail()" placeholder="Email ID" /><span
 				style="color: red" id="email2"></span>  
  <input class="form-control" type="password" name="password"
 				id="password" onchange="return validPassword()"
@@ -69,11 +73,10 @@
 				value="Login" />
 	</pre>
 	</form>
-	<footer style="margin-top: 50px">
+	<div class="footer fixed-bottom" style="margin-top: 70px">
 		<nav class="navbar navbar-light" style="background-color: teal;">
-			<pre>
-		</pre>
+			<h6 style="margin-left: 420px">© 2023 Copyright Parking website</h6>
 		</nav>
-	</footer>
+	</div>
 </body>
 </html>

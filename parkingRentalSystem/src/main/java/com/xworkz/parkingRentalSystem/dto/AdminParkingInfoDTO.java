@@ -14,7 +14,7 @@ public class AdminParkingInfoDTO implements Serializable, Comparable<AdminParkin
 	private String vehicleClassification;
 	private String term;
 	private double price;
-	private String discount;
+	private int discountInPercentage;
 
 	public AdminParkingInfoDTO() {
 		log.info("Created AdminParkingInfoDTO using no-arg");

@@ -30,8 +30,7 @@ public class ParkingServiceImpl implements ParkingService {
 		System.out.println(dto.getEmail());
 
 		AdminEntity entity = this.repo.findByMail(dto.getEmail());
-		if (entity.getEmail().equals(dto.getEmail())
-				&& entity.getPassword().equals(dto.getPassword())) {
+		if (entity != null && entity.getPassword().equals(dto.getPassword())) {
 
 			ParkingEmail.sendmail(entity.getEmail(), entity.getName());
 			entity.setLoginTime(LocalDateTime.now());

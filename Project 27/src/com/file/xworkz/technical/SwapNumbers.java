@@ -6,12 +6,12 @@ public class SwapNumbers {
 		int a = 2;
 		int b = 6;
 
-		a=a+b;
-		b=a-b;
-		a=a-b;
+		a = a + b;
+		b = a - b;
+		a = a - b;
 
-		System.out.println("a is "+a);
-		System.out.println("b is "+b);
+		System.out.println("a is " + a);
+		System.out.println("b is " + b);
 
 	}
 

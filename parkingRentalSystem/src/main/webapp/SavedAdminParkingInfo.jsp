@@ -25,11 +25,10 @@
 	<h4 style="text-align: center; color: green;">Parking info given
 		by ${dto.name} is successfully saved</h4>
 
-	<footer style="margin-top: 330px">
+	<div class="footer fixed-bottom">
 		<nav class="navbar navbar-light" style="background-color: teal;">
-			<a style="margin-left: 400px; color: orange; font-size: x-large;">Last
-				login :${dto.loginTime}</a>
+		   <h6 style="margin-left:200px;">© 2023 Copyright Parking website <span style="color: white;">${dto.email}</span>  Last login :${dto.loginTime}</h6>
 		</nav>
-	</footer>
+	</div>
 </body>
 </html>

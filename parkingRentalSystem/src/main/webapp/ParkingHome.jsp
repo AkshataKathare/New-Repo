@@ -15,23 +15,14 @@
 </head>
 <body>
 	<nav class="navbar navbar-light" style="background-color: teal;">
-		<img style="margin-left: 20px" height="50px"
-			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
-
-		<a class="btn btn-warning" href="AdminLogin.jsp" role="button">Admin
-			Login</a>
-		<div>
-			<a class="btn btn-warning" href="UserLogin.jsp" role="button">User
-				Login</a>
-		</div>
+		<pre><img style="margin-left: 20px" height="50px" src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg"> <a class="btn btn-warning" href="AdminLogin.jsp" role="button">Admin</a> <a class="btn btn-warning" href="User.jsp" role="button">User</a></pre>	
 	</nav>
 
-	<footer style="margin-top: 380px">
+	<div class="footer fixed-bottom">
 		<nav class="navbar navbar-light" style="background-color: teal;">
-			<pre>
-		</pre>
+			<h6 style="margin-left: 450px">© 2023 Copyright Parking website</h6>
 		</nav>
-	</footer>
+	</div>
 
 </body>
 </html>

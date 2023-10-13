@@ -3,7 +3,8 @@ package com.xworkz.parkingRentalSystem.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ import com.xworkz.parkingRentalSystem.service.AdminParkingInfoService;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Component
+@Controller
 @Slf4j
 @RequestMapping("/")
 public class AdminParkingInfoController {
@@ -26,7 +27,7 @@ public class AdminParkingInfoController {
 		log.info("Created AdminParkingInfoController using no-arg const");
 	}
 
-	@PostMapping("/save")
+	@PostMapping(value = "/save")
 	public String onDataSave(AdminParkingInfoDTO dto, Model model) {
 		log.info("Running onDataSave method in AdminParkingInfoController");
 		boolean save = this.service.save(dto);

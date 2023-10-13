@@ -18,11 +18,11 @@
 		<img style="margin-left: 20px" height="50px"
 			src="https://thumbs.dreamstime.com/b/flat-isolated-vector-eps-illustration-icon-minimal-design-long-shadow-parking-ticket-117821594.jpg">
 		<div>
-			<a style="margin-right: 800px" class="btn btn-warning"
+			<a style="margin-left: 800px" class="btn btn-warning"
 				href="LoginSuccess.jsp" role="button">Home</a>
 		</div>
 		<div style="color: orange; font-size: x-large; margin-right: 20px">
-			User : ${dto.name}</div>
+			User,${dto.name}</div>
 	</nav>
 
 
@@ -30,8 +30,8 @@
 		style="border: 1px solid white; margin-left: 400px; margin-right: 400px;"
 		action="search" method="get">
 		<pre>
-		Location<select class="form-select" name="location">
-			<option>Select</option>
+		LOCATION<select class="form-select" name="location">
+			<option value="">Select</option>
 			<option value="Rajajinagar">Rajajinagar</option>
 			<option value="BTM">BTM</option>
 			<option value="Vijaynagar">Vijaynagar</option>
@@ -41,7 +41,8 @@
 		<input class="btn-success" type="submit" value="Search" />
 		</pre>
 	</form>
-	<table class="table table-success table-striped">
+	<table class="table table-success table-striped"
+		style="margin-bottom: 80px">
 		<tr>
 			<th>Location</th>
 			<th>Vehicle Type</th>
@@ -58,19 +59,21 @@
 				<td>${dto.vehicleClassification}</td>
 				<td>${dto.term}</td>
 				<td>${dto.price}</td>
-				<td>${dto.discount}</td>
+				<td>${dto.discountInPercentage}</td>
 			</tr>
 		</c:forEach>
 
 	</table>
 
 
-	<footer style="margin-top: 210px">
+	<div class="footer fixed-bottom">
 		<nav class="navbar navbar-light" style="background-color: teal;">
-			<a style="margin-left: 400px; color: orange; font-size: x-large;">Last
-				login :${dto.loginTime}</a>
+			<h6 style="margin-left: 250px;">
+				© 2023 Copyright Parking website <span style="color: white;">${dto.email}</span>
+				Last login :${dto.loginTime}
+			</h6>
 		</nav>
-	</footer>
+	</div>
 
 </body>
 </html>

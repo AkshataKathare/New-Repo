@@ -69,8 +69,8 @@
 <workingSet IMemento.internal.id="ServerFile"/>
 </workingSet>
 <mruList name="ServerFile"/>
+<mruList name="Server"/>
 <mruList name="jdbcFramework"/>
 <mruList name="springJdbc"/>
 <mruList name="Server1"/>
-<mruList name="Server"/>
 </workingSetManager>

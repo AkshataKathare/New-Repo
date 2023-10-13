@@ -16,8 +16,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Entity
 @Table(name = "adminparkinginfo")
-@NamedQuery(name = "findEntity", query = "select inf from AdminParkingInfoEntity as inf where inf.location=:loc and inf.vehicleType=:vt and inf.vehicleClassification=:vc and inf.term=:ter")
-@NamedQuery(name = "searchQuery", query = "select serie from AdminParkingInfoEntity as serie where serie.location like :locate")
+@NamedQuery(name = "findEntity", query = "select serie from AdminParkingInfoEntity serie where serie.location=:loc and serie.vehicleType=:vt and serie.vehicleClassification=:vc and serie.term=:ter")
+@NamedQuery(name = "searchQuery", query = "select serie from AdminParkingInfoEntity serie where serie.location like :locate")
 public class AdminParkingInfoEntity implements Serializable, Comparable<AdminParkingInfoEntity> {
 
 	@Id
@@ -28,7 +28,7 @@ public class AdminParkingInfoEntity implements Serializable, Comparable<AdminPar
 	private String vehicleClassification;
 	private String term;
 	private double price;
-	private String discount;
+	private int discountInPercentage;
 
 	public AdminParkingInfoEntity() {
 		log.info("Created AdminParkingInfoEntity using no-arg const");
